@@ -27,6 +27,9 @@
     <ClCompile Include="Canton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="NodoProvinciaCanton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArbolCanton.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Canton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoProvinciaCanton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
