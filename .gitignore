@@ -33,3 +33,7 @@
 /Proyecto1/x64/Debug
 /x64/Debug
 /.vs/Proyecto1/v16
+
+.vs
+x64
+.idea
