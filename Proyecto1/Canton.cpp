@@ -1,4 +1,4 @@
-#include "Canton.h"
+	#include "Canton.h"
 
 void Canton::setCabecera(string pCabecera)
 {
