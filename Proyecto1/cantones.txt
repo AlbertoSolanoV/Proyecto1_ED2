@@ -1,0 +1,52 @@
+3,Cartago,Oriental,12.402
+3,Cartago,Occidental,10.394
+3,Cartago,Carmen,19.062
+3,Cartago,San Nicolás,29.130
+3,Cartago,Aguacaliente,35.498
+3,Cartago,Guadalupe,16.199
+3,Cartago,Corralillo,11.833
+3,Cartago,Tierra Blanca,5.756
+3,Cartago,Dulce Nombre,11.773
+3,Cartago,Llano Grande,4.958
+3,Cartago,Quebradilla,5.939
+3,Paraíso,Paraíso,21.369
+3,Paraíso,Santiago,6.332
+3,Paraíso,Orosi,10.002
+3,Paraíso,Cachí,5.834
+3,Paraíso,Llanos de Santa Lucía,18.943
+3,La Unión,Tres Ríos,9.331
+3,La Unión,San Diego,24.576
+3,La Unión,San Juan,15.366
+3,La Unión,San Rafael,15.787
+3,La Unión,Concepción,18.667
+3,La Unión,Dulce Nombre,8.947
+3,La Unión,San Ramón,4.420
+3,La Unión,Río Azul,14.275
+3,Jiménez,Juan Viñas,7.106
+3,Jiménez,Tucurrique,5.538
+3,Jiménez,Pejibaye,3.652
+3,Jiménez,La Victoria,0
+3,Turrialba,Turrialba,27.207
+3,Turrialba,La Suiza,7.985
+3,Turrialba,Peralta,618
+3,Turrialba,Santa Cruz,3.757
+3,Turrialba,Santa Teresita,5.355
+3,Turrialba,Pavones,4.633
+3,Turrialba,Tuis,2.984
+3,Turrialba,Tayutic,2.540
+3,Turrialba,Santa Rosa,5.709
+3,Turrialba,Tres Equis,1.958
+3,Turrialba,La Isabel,6.356
+3,Turrialba,Chirripó,4.554
+3,Alvarado,Pacayas,5.908
+3,Alvarado,Cervantes,6.759
+3,Alvarado,Capellades,2.655
+3,Oreamuno,San Rafael,28.942
+3,Oreamuno,Cot,10.974
+3,Oreamuno,Potrero Cerrado,2.624
+3,Oreamuno,Cipreses,4.122
+3,Oreamuno,Santa Rosa,2.942
+3,El Guarco,El Tejar,26.630
+3,El Guarco,San Isidro,11.313
+3,El Guarco,Tobosi,7.545
+3,El Guarco,Patio de Agua,447
