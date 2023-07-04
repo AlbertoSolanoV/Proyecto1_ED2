@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -140,6 +140,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArbolCanton.cpp" />
+    <ClCompile Include="arbolProvinciaCanton.cpp" />
+    <ClCompile Include="archivoLeer.cpp" />
     <ClCompile Include="Canton.cpp" />
     <ClCompile Include="NodoCanton.cpp" />
     <ClCompile Include="NodoProvinciaCanton.cpp" />
@@ -147,9 +149,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArbolCanton.h" />
+    <ClInclude Include="arbolProvinciaCanton.h" />
+    <ClInclude Include="archivoLeer.h" />
     <ClInclude Include="Canton.h" />
     <ClInclude Include="NodoProvinciaCanton.h" />
     <ClInclude Include="NodoCanton.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="cantones.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
