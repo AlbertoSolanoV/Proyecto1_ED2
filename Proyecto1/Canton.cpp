@@ -10,7 +10,7 @@ void Canton::setNombre(string pNombreC)
 	this->nombre = pNombreC;
 }
 
-void Canton::setCantidadPersona(float  pCantidad)
+void Canton::setCantidadPersona(int  pCantidad)
 {
 	this->cantidadPersona = pCantidad;
 }
@@ -30,7 +30,7 @@ string Canton::getNombre()
 	return this->nombre;
 }
 
-float  Canton::getCantidadPersona()
+int  Canton::getCantidadPersona()
 {
 	return this->cantidadPersona;
 }

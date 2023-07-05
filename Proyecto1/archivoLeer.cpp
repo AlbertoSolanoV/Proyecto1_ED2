@@ -13,10 +13,12 @@ string archivoLeer::getNombreArchivo()
 }
 /*
 En el vector datos el orden es:
-0. numero de provincia
-1. Cabecera de canton
-2. NombreCanton
-3. Cantidad Poblacion
+0. Canton
+1. Nombre Provincia
+2. Cabecera de canton
+3. Numero de provincia
+4. cantidad poblacion
+5. Nombre alcalde
 me falta poner los demas datos
 */
 void archivoLeer::leerArchivo(ArbolCanton& pArbolCanton)
@@ -26,13 +28,14 @@ void archivoLeer::leerArchivo(ArbolCanton& pArbolCanton)
 	if (archivo.is_open()) {
 		string linea;
 		while (getline(archivo, linea)) {
-			vector<string> datos = split(linea, ',');
+			vector<string> datos = split(linea, '-');
 			Canton nuevoCanton;
-			nuevoCanton.setCabecera(datos[1]);
-			nuevoCanton.setNombre(datos[2]);
+			nuevoCanton.setNombre(datos[0]);
+			nuevoCanton.setCabecera(datos[2]);
 
-			float poblacion = stof(datos[3]);
+			int poblacion = stoi(datos[4]);
 			nuevoCanton.setCantidadPersona(poblacion);
+			nuevoCanton.setNombreAlcalde(datos[5]);
 
 			pArbolCanton.insertar(nuevoCanton);
 
