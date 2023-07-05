@@ -30,6 +30,9 @@
     <ClCompile Include="NodoProvinciaCanton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="archivoLeer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArbolCanton.h">
@@ -44,5 +47,11 @@
     <ClInclude Include="NodoProvinciaCanton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="archivoLeer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="cantones.txt" />
   </ItemGroup>
 </Project>

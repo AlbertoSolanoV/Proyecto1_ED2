@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArbolCanton.cpp" />
+    <ClCompile Include="archivoLeer.cpp" />
     <ClCompile Include="Canton.cpp" />
     <ClCompile Include="NodoCanton.cpp" />
     <ClCompile Include="NodoProvinciaCanton.cpp" />
@@ -147,9 +148,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArbolCanton.h" />
+    <ClInclude Include="archivoLeer.h" />
     <ClInclude Include="Canton.h" />
     <ClInclude Include="NodoProvinciaCanton.h" />
     <ClInclude Include="NodoCanton.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="cantones.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
