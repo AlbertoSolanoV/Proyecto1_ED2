@@ -15,10 +15,12 @@ private:
     NodoCanton* rotarIzquierda(NodoCanton* x);
     NodoCanton* insertar(NodoCanton* pNodoCanton, Canton pCanton);
     void mostrar(NodoCanton* pNodoCanton);
+    NodoCanton* buscar(string, NodoCanton*);
 
 public:
     ArbolCanton();
     void insertar(Canton pCanton);
     void mostrar();
+    void buscarPorNombre(string);
 };
 

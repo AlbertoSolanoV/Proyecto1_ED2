@@ -8,19 +8,19 @@ class Canton
 private:
 	string cabecera;
 	string nombre;
-	float  cantidadPersona;
+	int  cantidadPersona;
 	string nombreAlcalde;
 
 public:
 	//GETS Y SETS
 	void setCabecera(string);
 	void setNombre(string);
-	void setCantidadPersona(float);
+	void setCantidadPersona(int);
 	void setNombreAlcalde(string);
 
 	string getCabecera();
 	string getNombre();
-	float  getCantidadPersona();
+	int  getCantidadPersona();
 	string getNombreAlcalde();
 
 	void modificar(string, int);
