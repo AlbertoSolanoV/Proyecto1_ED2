@@ -15,7 +15,7 @@ string archivoLeer::getNombreArchivo()
 En el vector datos el orden es:
 0. Canton
 1. Nombre Provincia
-2. Cabecera de canton
+2. Cabecera de canton // Distrito
 3. Numero de provincia
 4. cantidad poblacion
 5. Nombre alcalde
@@ -32,7 +32,7 @@ void archivoLeer::leerArchivo(ArbolCanton& pArbolCanton)
 			Canton nuevoCanton;
 			nuevoCanton.setNombre(datos[0]);
 			nuevoCanton.setCabecera(datos[2]);
-
+			datos[4].erase(std::remove_if(datos[4].begin(), datos[4].end(), [](unsigned char c) { return std::isspace(c); }), datos[4].end()); //Para quitar el espacio
 			int poblacion = stoi(datos[4]);
 			nuevoCanton.setCantidadPersona(poblacion);
 			nuevoCanton.setNombreAlcalde(datos[5]);
