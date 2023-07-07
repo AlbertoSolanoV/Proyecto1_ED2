@@ -1,11 +1,13 @@
 #include "arbolProvinciaCanton.h"
+#pragma once
+#ifndef FILE_H
 
 enum Color
 {
     Rojo = 1,
     Negro = 0
 };
-
+#endif
 arbolProvinciaCanton::arbolProvinciaCanton()
 {
     //nil = new NodoProvinciaCanton(0,"", Negro);
