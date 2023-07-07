@@ -13,7 +13,7 @@ private:
 
     void leftRotate(NodoProvinciaCanton* x);
     void rightRotate(NodoProvinciaCanton* x);
-    void insertFixup(NodoProvinciaCanton* z);
+    void insertFix(NodoProvinciaCanton* k);
     void insertHelper(NodoProvinciaCanton* z);
     void deleteNodeHelper(NodoProvinciaCanton* node, string canton);
     void inorderHelper(NodoProvinciaCanton* node);
@@ -24,7 +24,6 @@ public:
 
     arbolProvinciaCanton();
     void insertar(string provincia, string canton);
-    void remove(string canton);
     void listar();
 };
 
