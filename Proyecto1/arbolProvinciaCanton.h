@@ -23,7 +23,7 @@ private:
 public:
 
     arbolProvinciaCanton();
-    void insertar(string provincia, string canton);
+    void insertar(string provincia, string canton, NodoCanton*);
     void listar();
 };
 

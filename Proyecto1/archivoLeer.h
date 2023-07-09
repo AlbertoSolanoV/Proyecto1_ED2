@@ -1,5 +1,6 @@
 #pragma once
 #include "ArbolCanton.h"
+#include "arbolProvinciaCanton.h"
 #include "Canton.h"
 #include <string>
 #include <fstream>
@@ -16,7 +17,7 @@ public:
 	void setNombreArchivo(string);
 	string getNombreArchivo();
 
-	void leerArchivo(ArbolCanton&);
+	void leerArchivo(ArbolCanton&, arbolProvinciaCanton&);
 	vector<string> split(const std::string& cadena, char delimitador);
 
 };

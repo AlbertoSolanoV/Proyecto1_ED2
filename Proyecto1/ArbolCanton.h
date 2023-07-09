@@ -21,6 +21,6 @@ public:
     ArbolCanton();
     void insertar(Canton pCanton);
     void mostrar();
-    void buscarPorNombre(string);
+    NodoCanton* buscarPorNombre(string);
 };
 
