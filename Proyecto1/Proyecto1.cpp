@@ -31,6 +31,7 @@ int main()
 		case 2:
 			cout << "Recorrido inorden del Árbol AVL: ";
 			arbol.mostrar();
+			//arbol.imprimirNodos();
 			cout << endl;
 			break;
 		case 3:
