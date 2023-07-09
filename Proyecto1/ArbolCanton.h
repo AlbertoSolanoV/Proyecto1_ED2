@@ -17,12 +17,15 @@ private:
     void mostrar(NodoCanton* pNodoCanton);
     NodoCanton* buscar(string, NodoCanton*);
     void imprimirNodos(NodoCanton* nodo, int nivel);
+    void modifyCanton(string, NodoCanton*);
+    void displayData(NodoCanton*);
 
 public:
     ArbolCanton();
     void insertar(Canton pCanton);
     void mostrar();
     void imprimirNodos();
+    void modifyCanton(string);
     NodoCanton* buscarPorNombre(string);
 };
 
