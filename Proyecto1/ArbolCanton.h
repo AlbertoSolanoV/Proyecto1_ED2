@@ -22,7 +22,7 @@ public:
     ArbolCanton();
     void insertar(Canton pCanton);
     void mostrar();
-    void buscarPorNombre(string);
     void imprimirNodos();
+    NodoCanton* buscarPorNombre(string);
 };
 

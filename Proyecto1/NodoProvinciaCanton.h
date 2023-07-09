@@ -26,6 +26,7 @@ private:
 	NodoCanton* PtrCanton;
 public:
 	NodoProvinciaCanton(int, string, Color);
+	NodoProvinciaCanton();
 	~NodoProvinciaCanton();
 	//getters
 	string getLlave();

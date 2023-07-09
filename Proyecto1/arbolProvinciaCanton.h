@@ -13,18 +13,21 @@ private:
 
     void leftRotate(NodoProvinciaCanton* x);
     void rightRotate(NodoProvinciaCanton* x);
-    void insertFixup(NodoProvinciaCanton* z);
+    void insertFix(NodoProvinciaCanton* k);
     void insertHelper(NodoProvinciaCanton* z);
     void deleteNodeHelper(NodoProvinciaCanton* node, string canton);
     void inorderHelper(NodoProvinciaCanton* node);
     void transplant(NodoProvinciaCanton* u, NodoProvinciaCanton* v);
     void deleteFixup(NodoProvinciaCanton* x);
-
+    void listartAyudante(NodoProvinciaCanton* root, string indent, bool last);
+    NodoProvinciaCanton* buscarAyudante(NodoProvinciaCanton* node, string key);
+    
 public:
 
     arbolProvinciaCanton();
-    void insertar(string provincia, string canton);
-    void remove(string canton);
+    void insertar(string provincia, string canton, NodoCanton*);
     void listar();
+    //busca por llave
+    NodoProvinciaCanton* buscar(string llave);
 };
 
