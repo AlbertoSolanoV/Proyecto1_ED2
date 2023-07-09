@@ -42,9 +42,9 @@ void archivoLeer::leerArchivo(ArbolCanton& pArbolCanton, arbolProvinciaCanton& p
 			//Buscamos el nodo del canton registrado
 			pArbolProvinciaCanton.insertar(datos[3],datos[0],nodoCanton);
 
-			cout << linea << std::endl;  // Imprime la línea en la consola.
+			cout << linea << std::endl;  // Imprime la lÃ­nea en la consola.
 		}
-		archivo.close();  // Cierra el archivo después de leerlo.
+		archivo.close();  // Cierra el archivo despuÃ©s de leerlo.
 	}
 	else {
 		cout << "No se pudo abrir el archivo." << std::endl;
