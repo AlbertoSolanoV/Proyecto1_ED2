@@ -19,7 +19,7 @@ private:
     void inorderHelper(NodoProvinciaCanton* node);
     void transplant(NodoProvinciaCanton* u, NodoProvinciaCanton* v);
     void deleteFixup(NodoProvinciaCanton* x);
-
+    void listartAyudante(NodoProvinciaCanton* root, string indent, bool last);
 public:
 
     arbolProvinciaCanton();

@@ -3,6 +3,7 @@
 #include "ArbolCanton.h"
 #include "Canton.h"
 #include "archivoLeer.h"
+#include "arbolProvinciaCanton.h"
 
 using namespace std;
 
@@ -12,8 +13,9 @@ int main()
 	int opcion;
 	archivoLeer leerDatos;
 	string buscarCanton;
+	arbolProvinciaCanton arbolProvCant;
 
-	do {
+	/*do {
 		cout << "==== Menú del Árbol AVL ====" << std::endl;
 		cout << "1. Insertar valor" << std::endl;
 		cout << "2. Realizar recorrido inorden" << std::endl;
@@ -52,7 +54,14 @@ int main()
 		}
 
 		cout << endl;
-	} while (opcion != 4);
+	} while (opcion != 4);*/
+
+	arbolProvCant.insertar("San Jose", "desampa");
+	arbolProvCant.insertar("Limon", "coral");
+	arbolProvCant.insertar("Cartago", "fff");
+	arbolProvCant.insertar("Alajuela", "San carlos");
+	arbolProvCant.listar();
+
 
 	return 0;
 }

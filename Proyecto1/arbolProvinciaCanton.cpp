@@ -1,4 +1,5 @@
 #include "arbolProvinciaCanton.h"
+#include <iostream>
 
 
 arbolProvinciaCanton::arbolProvinciaCanton()
@@ -7,6 +8,28 @@ arbolProvinciaCanton::arbolProvinciaCanton()
 
 void arbolProvinciaCanton::listar()
 {
+    if (this->raiz) {
+        listartAyudante(this->raiz, "", true);
+    }
+}
+
+void arbolProvinciaCanton::listartAyudante(NodoProvinciaCanton* raiz, string indent, bool last) {
+    if (raiz != this->nil) {
+        cout << indent;
+        if (last) {
+            cout << "R----";
+            indent += "   ";
+        }
+        else {
+            cout << "L----";
+            indent += "|  ";
+        }
+
+        int sColor = raiz->getColor() ? Rojo : Negro;
+        cout << raiz->getLlave() << "(" << sColor << ")" << endl;
+        listartAyudante(raiz->getIzquierda(), indent, false);
+        listartAyudante(raiz->getDerecha(), indent, true);
+    }
 }
 
 void arbolProvinciaCanton::rightRotate(NodoProvinciaCanton* x) {
