@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "ArbolCanton.h"
+#include "arbolProvinciaCanton.h"
 #include "Canton.h"
 #include "archivoLeer.h"
 
@@ -8,29 +9,34 @@ using namespace std;
 
 int main()
 {
-	ArbolCanton arbol;
+	ArbolCanton arbolCanton;
+	arbolProvinciaCanton arbolProvinciaCanton;
 	int opcion;
 	archivoLeer leerDatos;
 	string buscarCanton;
 
 	do {
-		cout << "==== Menú del Árbol AVL ====" << std::endl;
-		cout << "1. Insertar valor" << std::endl;
+		cout << "==== Menú ====" << std::endl;
+		cout << "1. Insertar valores" << std::endl;
+		cout << "==== Menú del Árbol AVL  Canton ====" << std::endl;
 		cout << "2. Realizar recorrido inorden" << std::endl;
 		cout << "3. Buscar canton por nombre" << std::endl;
-		cout << "4. Salir" << std::endl;
+		cout << "==== Menú del Árbol RojoNegro ProvinciaCanton ====" << std::endl;
+		cout << "4. Insertar valor" << std::endl;
+		cout << "5. Realizar recorrido inorden" << std::endl;
+		cout << "6. Salir" << std::endl;
 		cout << "Ingrese una opción: ";
 		cin >> opcion;
 
 		switch (opcion) {
 		case 1:
 			leerDatos.setNombreArchivo("cantones.txt");
-			leerDatos.leerArchivo(arbol);
+			leerDatos.leerArchivo(arbolCanton, arbolProvinciaCanton);
 			cout << "Archivo leido correctamente." << endl;
 			break;
 		case 2:
 			cout << "Recorrido inorden del Árbol AVL: ";
-			arbol.mostrar();
+			arbolCanton.mostrar();
 			cout << endl;
 			break;
 		case 3:
@@ -40,10 +46,16 @@ int main()
 			std::getline(std::cin, buscarCanton);
 			
 
-			arbol.buscarPorNombre(buscarCanton);
+			arbolCanton.buscarPorNombre(buscarCanton);
 			cout << endl;
 			break;
 		case 4:
+
+			break;
+		case 5:
+		
+			break;
+		case 6:
 			cout << "¡Hasta luego!" << endl;
 			break;
 		default:
@@ -52,7 +64,7 @@ int main()
 		}
 
 		cout << endl;
-	} while (opcion != 4);
+	} while (opcion != 6);
 
 	return 0;
 }
