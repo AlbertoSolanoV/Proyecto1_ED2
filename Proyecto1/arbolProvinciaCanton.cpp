@@ -176,3 +176,18 @@ void arbolProvinciaCanton::insertar(std::string provincia, std::string canton, N
 
     insertFix(node);
 }
+
+NodoProvinciaCanton* arbolProvinciaCanton::buscar(string llave) {
+    return buscarAyudante(this->raiz, llave);
+}
+
+NodoProvinciaCanton* arbolProvinciaCanton::buscarAyudante(NodoProvinciaCanton* node, string llave) {
+        if (node == this->nil ||  llave.compare(node->getLlave()) == 0 ) {
+            return node;
+        }
+
+        if (llave.compare(node->getLlave()) != 0) {
+            return buscarAyudante(node->getIzquierda(), llave);
+        }
+        return buscarAyudante(node->getDerecha(), llave);
+}
