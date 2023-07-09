@@ -4,7 +4,7 @@
 class NodoCanton
 {
 private:
-    Canton canton;
+    Canton* canton;
     NodoCanton* izquierdo;
     NodoCanton* derecho;
     int altura;
@@ -12,18 +12,18 @@ private:
 
 public: 
     //GETS Y SETS
-    void setCanton(Canton);
+    void setCanton(Canton*);
     void setIzquierda(NodoCanton*);
     void setDerecha(NodoCanton*);
     void setAltura(int);
 
-    Canton getCanton();
+    Canton* getCanton();
     NodoCanton* getIzquierda();
     NodoCanton* getDerecha();
     int getAltura();
 
-    void Modificar(string, int);
-    NodoCanton(Canton pCanton);
+    void Modificar(string,string, int);
+    NodoCanton(Canton* pCanton);
 
 };
 
