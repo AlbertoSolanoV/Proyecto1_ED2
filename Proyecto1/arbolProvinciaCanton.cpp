@@ -103,7 +103,7 @@ void arbolProvinciaCanton::insertFix(NodoProvinciaCanton* k) {
 
 }
 
-void arbolProvinciaCanton::insertar(std::string provincia, std::string canton) {
+void arbolProvinciaCanton::insertar(std::string provincia, std::string canton, NodoCanton* pNodoCanton) {
     NodoProvinciaCanton* node = new NodoProvinciaCanton();
 
     node->setPadre( nullptr);
@@ -111,6 +111,11 @@ void arbolProvinciaCanton::insertar(std::string provincia, std::string canton) {
     node->setIzquierda(this->nil);
     node->setDerecha(this->nil);
     node->setColor(Negro);
+
+    
+    node->setProvinciaCode(stoi(provincia));
+    node->setCanton(canton);
+    node->setPtrCanton(pNodoCanton);
 
     NodoProvinciaCanton* y = nullptr;
     NodoProvinciaCanton* x = this->raiz;
