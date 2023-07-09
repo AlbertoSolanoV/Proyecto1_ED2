@@ -138,9 +138,9 @@ void ArbolCanton::mostrar()
 	mostrar(raiz);
 }
 
-void ArbolCanton::buscarPorNombre(string pNombreCanton)
+NodoCanton* ArbolCanton::buscarPorNombre(string pNombreCanton)
 {
-	buscar(pNombreCanton, raiz);
+	return buscar(pNombreCanton, raiz);
 }
 
 void ArbolCanton::imprimirNodos()

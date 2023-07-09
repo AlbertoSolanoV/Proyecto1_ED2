@@ -7,6 +7,13 @@ NodoProvinciaCanton::NodoProvinciaCanton(int _provincia, string _canton, Color _
 	this->provinciaCode = _provincia;
 }
 
+NodoProvinciaCanton::NodoProvinciaCanton()
+{
+	this->canton = "";
+	this->color = Negro;
+	this->provinciaCode = 0;
+}
+
 string NodoProvinciaCanton::getLlave()
 {
 	return this->llave;
