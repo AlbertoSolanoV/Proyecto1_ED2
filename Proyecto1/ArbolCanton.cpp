@@ -82,18 +82,18 @@ NodoCanton* ArbolCanton::insertar(NodoCanton* pNodoCanton, Canton pCanton)
 	}
 
 	// Caso Derecha - Derecha
-	if (factorBalance < -1 && pCanton.getNombre().compare(pNodoCanton->getDerecha()->getCanton().getNombre()) > 0 ) {
+	if (factorBalance < -1 && pCanton.getNombre().compare(pNodoCanton->getDerecha()->getCanton().getNombre()) > 0) {
 		return rotarIzquierda(pNodoCanton);
 	}
 
 	// Caso Izquierda - Derecha
-	if (factorBalance > 1 && pCanton.getNombre().compare(pNodoCanton->getIzquierda()->getCanton().getNombre()) >0 ) {
+	if (factorBalance > 1 && pCanton.getNombre().compare(pNodoCanton->getIzquierda()->getCanton().getNombre()) > 0) {
 		pNodoCanton->setIzquierda(rotarIzquierda(pNodoCanton->getIzquierda()));
 		return rotarDerecha(pNodoCanton);
 	}
 
 	// Caso Derecha - Izquierda
-	if (factorBalance < -1 && pCanton.getNombre().compare(pNodoCanton->getDerecha()->getCanton().getNombre()) <0 ) {
+	if (factorBalance < -1 && pCanton.getNombre().compare(pNodoCanton->getDerecha()->getCanton().getNombre()) < 0) {
 		pNodoCanton->setDerecha(rotarDerecha(pNodoCanton->getDerecha()));
 		return rotarIzquierda(pNodoCanton);
 	}
@@ -107,9 +107,10 @@ void ArbolCanton::mostrar(NodoCanton* pNodoCanton)
 		return;
 	}
 
+
 	mostrar(pNodoCanton->getIzquierda());
 	/*cout << "--------------------------------------------------------------" << endl;
-	cout << pNodoCanton->getCanton().getNombre() << " - " <<endl; 
+	cout << pNodoCanton->getCanton().getNombre() << " - " <<endl;
 	if (pNodoCanton->getIzquierda() != nullptr) {
 		cout << "Izquierdo: ";
 		cout << pNodoCanton->getIzquierda()->getCanton().getCabecera() << endl;
@@ -121,6 +122,25 @@ void ArbolCanton::mostrar(NodoCanton* pNodoCanton)
 	cout << "--------------------------------------------------------------" << endl;*/
 	cout << pNodoCanton->getCanton().getNombre() << " - " << endl;
 	mostrar(pNodoCanton->getDerecha());
+}
+
+void ArbolCanton::llenarArbolPoblacion(ArbolCantonPoblacion& pArbolCantonPoblacion, NodoCanton* pNodoCanton)
+{
+
+	if (pNodoCanton == nullptr) {
+		return;
+	}
+
+
+	llenarArbolPoblacion(pArbolCantonPoblacion, pNodoCanton->getIzquierda());
+
+	cout << pNodoCanton->getCanton().getNombre() << " - Ingresado " << endl;
+	pArbolCantonPoblacion.insertar(pNodoCanton->getCanton());
+
+	llenarArbolPoblacion(pArbolCantonPoblacion, pNodoCanton->getDerecha());
+
+
+
 }
 
 ArbolCanton::ArbolCanton()
@@ -142,6 +162,12 @@ NodoCanton* ArbolCanton::buscarPorNombre(string pNombreCanton)
 {
 	return buscar(pNombreCanton, raiz);
 }
+
+void ArbolCanton::llenarArbolPoblacion(ArbolCantonPoblacion& pArbolCantonPoblacion)
+{
+	llenarArbolPoblacion(pArbolCantonPoblacion, raiz);
+}
+
 
 void ArbolCanton::imprimirNodos()
 {
@@ -183,7 +209,7 @@ NodoCanton* ArbolCanton::buscar(string pNombreCanton, NodoCanton* pNodoCanton)
 		cout << "Nombre del alcalde: " << pNodoCanton->getCanton().getNombreAlcalde() << endl;
 		return pNodoCanton;
 	}
-		
+
 
 	if (pNombreCanton < pNodoCanton->getCanton().getNombre())
 		return buscar(pNombreCanton, pNodoCanton->getIzquierda());

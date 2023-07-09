@@ -1,6 +1,7 @@
 #pragma once
 #include "NodoCanton.h"
 #include "Canton.h"
+#include "ArbolCantonPoblacion.h"
 #include <iostream>
 using namespace std;
 
@@ -17,6 +18,7 @@ private:
     void mostrar(NodoCanton* pNodoCanton);
     NodoCanton* buscar(string, NodoCanton*);
     void imprimirNodos(NodoCanton* nodo, int nivel);
+    void llenarArbolPoblacion(ArbolCantonPoblacion& pArbolCantonPoblacion, NodoCanton* pNodoCanton);
 
 public:
     ArbolCanton();
@@ -24,5 +26,6 @@ public:
     void mostrar();
     void imprimirNodos();
     NodoCanton* buscarPorNombre(string);
+    void llenarArbolPoblacion(ArbolCantonPoblacion& pArbolCantonPoblacion);
 };
 

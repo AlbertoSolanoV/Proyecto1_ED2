@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <string>
 #include "ArbolCanton.h"
+#include "ArbolCantonPoblacion.h"
 #include "arbolProvinciaCanton.h"
 #include "Canton.h"
 #include "archivoLeer.h"
@@ -9,6 +10,7 @@ using namespace std;
 
 int main()
 {
+	ArbolCantonPoblacion arbolCantonPoblacion;
 	ArbolCanton arbolCanton;
 	arbolProvinciaCanton arbolProvinciaCanton;
 	int opcion;
@@ -22,7 +24,7 @@ int main()
 		cout << "2. Realizar recorrido inorden" << std::endl;
 		cout << "3. Buscar canton por nombre" << std::endl;
 		cout << "==== Menu del arbol RojoNegro ProvinciaCanton ====" << std::endl;
-		cout << "4. Insertar valor" << std::endl;
+		cout << "4. Insertar valores en arrbol poblacion" << std::endl;
 		cout << "5. listar" << std::endl;
 		cout << "6. Salir" << std::endl;
 		cout << "Ingrese una opcion: ";
@@ -50,7 +52,8 @@ int main()
 			cout << endl;
 			break;
 		case 4:
-			//arbolProvinciaCanton.insertar();
+			arbolCanton.llenarArbolPoblacion(arbolCantonPoblacion);
+			arbolCantonPoblacion.mostrarMayor();
 			break;
 		case 5:
 			arbolProvinciaCanton.listar();

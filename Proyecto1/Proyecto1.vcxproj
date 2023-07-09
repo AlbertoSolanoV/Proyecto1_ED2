@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArbolCanton.cpp" />
+    <ClCompile Include="ArbolCantonPoblacion.cpp" />
     <ClCompile Include="arbolProvinciaCanton.cpp" />
     <ClCompile Include="archivoLeer.cpp" />
     <ClCompile Include="Canton.cpp" />
@@ -149,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArbolCanton.h" />
+    <ClInclude Include="ArbolCantonPoblacion.h" />
     <ClInclude Include="arbolProvinciaCanton.h" />
     <ClInclude Include="archivoLeer.h" />
     <ClInclude Include="Canton.h" />

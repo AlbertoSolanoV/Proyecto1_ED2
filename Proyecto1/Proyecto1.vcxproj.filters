@@ -33,6 +33,12 @@
     <ClCompile Include="archivoLeer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="arbolProvinciaCanton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArbolCantonPoblacion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArbolCanton.h">
@@ -48,6 +54,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="archivoLeer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="arbolProvinciaCanton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArbolCantonPoblacion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
