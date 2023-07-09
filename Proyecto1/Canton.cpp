@@ -40,8 +40,9 @@ string Canton::getNombreAlcalde()
 	return this->nombreAlcalde;
 }
 
-void Canton::modificar(string pNombreAlcalde, int pCantidad)
+void Canton::modificar(string pNombreAlcalde,string cabecera, int pCantidad)
 {
 	this->nombreAlcalde = pNombreAlcalde;
 	this->cantidadPersona = pCantidad;
+	this->cabecera= cabecera;
 }

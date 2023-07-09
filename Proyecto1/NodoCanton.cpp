@@ -1,6 +1,6 @@
 #include "NodoCanton.h"
 
-NodoCanton::NodoCanton(Canton pCanton)
+NodoCanton::NodoCanton(Canton* pCanton)
 {
 	this->canton = pCanton;
 	this->izquierdo = nullptr;
@@ -8,7 +8,7 @@ NodoCanton::NodoCanton(Canton pCanton)
 	this->altura = 1;
 }
 
-void NodoCanton::setCanton(Canton pCanton)
+void NodoCanton::setCanton(Canton* pCanton)
 {
 	this->canton = pCanton;
 }
@@ -28,7 +28,7 @@ void NodoCanton::setAltura(int pAltura)
 	this->altura = pAltura;
 }
 
-Canton NodoCanton::getCanton()
+Canton* NodoCanton::getCanton()
 {
 	return this->canton;
 }
@@ -48,10 +48,10 @@ int NodoCanton::getAltura()
 	return this->altura;
 }
 
-void NodoCanton::Modificar(string pNombreAlcalde, int pPoblacion)
-{
-	this->canton.modificar(pNombreAlcalde, pPoblacion);
-}
+//void NodoCanton::Modificar(string pNombreAlcalde, string cebecera, int pPoblacion)
+//{
+//	this->canton.modificar(pNombreAlcalde,cebecera, pPoblacion);
+//}
 
 
 

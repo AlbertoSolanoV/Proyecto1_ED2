@@ -29,13 +29,13 @@ void archivoLeer::leerArchivo(ArbolCanton& pArbolCanton, arbolProvinciaCanton& p
 		string linea;
 		while (getline(archivo, linea)) {
 			vector<string> datos = split(linea, '-');
-			Canton nuevoCanton;
-			nuevoCanton.setNombre(datos[0]);
-			nuevoCanton.setCabecera(datos[2]);
+			Canton* nuevoCanton = new Canton();
+			nuevoCanton->setNombre(datos[0]);
+			nuevoCanton->setCabecera(datos[2]);
 			datos[4].erase(std::remove_if(datos[4].begin(), datos[4].end(), [](unsigned char c) { return std::isspace(c); }), datos[4].end()); //Para quitar el espacio
 			int poblacion = stoi(datos[4]);
-			nuevoCanton.setCantidadPersona(poblacion);
-			nuevoCanton.setNombreAlcalde(datos[5]);
+			nuevoCanton->setCantidadPersona(poblacion);
+			nuevoCanton->setNombreAlcalde(datos[5]);
 
 			pArbolCanton.insertar(nuevoCanton); //Insertamos en provincia Canton
 			NodoCanton* nodoCanton = pArbolCanton.buscarPorNombre(datos[0]);
