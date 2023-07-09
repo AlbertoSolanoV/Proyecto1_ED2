@@ -44,17 +44,27 @@ NodoCanton* ArbolCanton::rotarIzquierda(NodoCanton* x)
 
 	return y;
 }
-
+/*
+int string::compare (const string& str) const
+Returns:
+0 : if both strings are equal.
+A value < 0 : if *this is shorter than str or,
+first character that doesn't match is smaller than str.
+A value > 0 : if *this is longer than str or,
+first character that doesn't match is greater
+*/
 NodoCanton* ArbolCanton::insertar(NodoCanton* pNodoCanton, Canton pCanton)
 {
 	if (pNodoCanton == nullptr) {
 		return new NodoCanton(pCanton);
 	}
 
-	if (pCanton.getCabecera() < pNodoCanton->getCanton().getCabecera()) {
+	int valor = pCanton.getNombre().compare(pNodoCanton->getCanton().getNombre());
+
+	if (valor < 0) {
 		pNodoCanton->setIzquierda(insertar(pNodoCanton->getIzquierda(), pCanton));
 	}
-	else if (pCanton.getCabecera() > pNodoCanton->getCanton().getCabecera()) {
+	else if (valor > 0) {
 		pNodoCanton->setDerecha(insertar(pNodoCanton->getDerecha(), pCanton));
 	}
 	else {
@@ -67,23 +77,23 @@ NodoCanton* ArbolCanton::insertar(NodoCanton* pNodoCanton, Canton pCanton)
 	int factorBalance = obtenerFactorBalance(pNodoCanton);
 
 	// Caso Izquierda - Izquierda
-	if (factorBalance > 1 && pCanton.getCabecera() < pNodoCanton->getIzquierda()->getCanton().getCabecera()) {
+	if (factorBalance > 1 && pCanton.getNombre().compare(pNodoCanton->getIzquierda()->getCanton().getNombre()) < 0) {
 		return rotarDerecha(pNodoCanton);
 	}
 
 	// Caso Derecha - Derecha
-	if (factorBalance < -1 && pCanton.getCabecera() > pNodoCanton->getDerecha()->getCanton().getCabecera()) {
+	if (factorBalance < -1 && pCanton.getNombre().compare(pNodoCanton->getDerecha()->getCanton().getNombre()) > 0 ) {
 		return rotarIzquierda(pNodoCanton);
 	}
 
 	// Caso Izquierda - Derecha
-	if (factorBalance > 1 && pCanton.getCabecera() > pNodoCanton->getIzquierda()->getCanton().getCabecera()) {
+	if (factorBalance > 1 && pCanton.getNombre().compare(pNodoCanton->getIzquierda()->getCanton().getNombre()) >0 ) {
 		pNodoCanton->setIzquierda(rotarIzquierda(pNodoCanton->getIzquierda()));
 		return rotarDerecha(pNodoCanton);
 	}
 
 	// Caso Derecha - Izquierda
-	if (factorBalance < -1 && pCanton.getCabecera() < pNodoCanton->getDerecha()->getCanton().getCabecera()) {
+	if (factorBalance < -1 && pCanton.getNombre().compare(pNodoCanton->getDerecha()->getCanton().getNombre()) <0 ) {
 		pNodoCanton->setDerecha(rotarDerecha(pNodoCanton->getDerecha()));
 		return rotarIzquierda(pNodoCanton);
 	}
@@ -98,7 +108,18 @@ void ArbolCanton::mostrar(NodoCanton* pNodoCanton)
 	}
 
 	mostrar(pNodoCanton->getIzquierda());
-	cout << pNodoCanton->getCanton().getNombre() << " - ";
+	/*cout << "--------------------------------------------------------------" << endl;
+	cout << pNodoCanton->getCanton().getNombre() << " - " <<endl; 
+	if (pNodoCanton->getIzquierda() != nullptr) {
+		cout << "Izquierdo: ";
+		cout << pNodoCanton->getIzquierda()->getCanton().getCabecera() << endl;
+	}
+	if (pNodoCanton->getDerecha() != nullptr) {
+		cout << "Derecha: ";
+		cout << pNodoCanton->getDerecha()->getCanton().getCabecera() << endl;
+	}
+	cout << "--------------------------------------------------------------" << endl;*/
+	cout << pNodoCanton->getCanton().getNombre() << " - " << endl;
 	mostrar(pNodoCanton->getDerecha());
 }
 
@@ -122,11 +143,36 @@ NodoCanton* ArbolCanton::buscarPorNombre(string pNombreCanton)
 	return buscar(pNombreCanton, raiz);
 }
 
+void ArbolCanton::imprimirNodos()
+{
+	imprimirNodos(raiz, 0);
+}
+
+void ArbolCanton::imprimirNodos(NodoCanton* nodo, int nivel)
+{
+	if (nodo == nullptr)
+		return;
+
+	imprimirNodos(nodo->getDerecha(), nivel + 1);
+
+	for (int i = 0; i < nivel; i++)
+		std::cout << "    ";
+
+	std::cout << nodo->getCanton().getCabecera() << std::endl;
+
+	imprimirNodos(nodo->getIzquierda(), nivel + 1);
+}
+
 NodoCanton* ArbolCanton::buscar(string pNombreCanton, NodoCanton* pNodoCanton)
 {
 
-	if (pNodoCanton == nullptr)
+	if (pNodoCanton == nullptr) {
+		cout << "No se ha encontrado el canton" << endl;
+
 		return pNodoCanton;
+
+	}
+	cout << "Canton: " << pNodoCanton->getCanton().getNombre() << endl;
 
 	if (pNodoCanton->getCanton().getNombre() == pNombreCanton) {
 		cout << "Informacion del canton:" << endl;

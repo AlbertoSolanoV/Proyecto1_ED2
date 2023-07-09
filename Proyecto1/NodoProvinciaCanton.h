@@ -3,6 +3,10 @@
 #include "NodoCanton.h"
 using namespace std;
 #pragma once
+#ifndef FILE_H
+#define FILE_H
+
+
 enum Color
 {
 	Rojo = 1,
@@ -45,3 +49,4 @@ public:
 	void setPtrCanton(NodoCanton*);
 
 };
+#endif

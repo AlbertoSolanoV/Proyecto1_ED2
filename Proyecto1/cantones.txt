@@ -1,74 +1,74 @@
-San José-San José-San José-1-288 054-Johnny Araya Monge
-Escazú-San José-Escazú-1-56 509-Arnoldo Barahona Cortés
-Desamparados-San José-Desamparados-1-208 411-Hazel Torres Hernández
-Puriscal-San José-Santiago-1-33 004-Iris Cristina Arroyo Hererra
-Tarrazú-San José-San Marcos-1-16 280-Iris Cristina Arroyo Hererra
-Aserrí-San José-Aserrí-1-41 947-Ana Lucía Chavarría Vargas
-Mora-San José-Ciudad Colón-1-28 947-Gilberto Monge Aguilar
-Goicoechea-San José-Guadalupe-1-81 947-Russell Madrigal Valverde
-Santa Ana-San José-Santa Ana-1-288 054-Johnny Araya Monge
-Alajuelita-San José-Alajuelita-1-87 947-Roberto Chacón Paut
-Vásquez de Coronado-San José-San Isidro-1-23 947-Mauricio Vargas Rodríguez
-Acosta-San José-San Ignacio-1-20 947-Carlos Rafael Rodríguez Chaves
-Tibás-San José-San Juan-1-82 947-Carlos Cascante Cascante
-Moravia-San José-San Vicente-1-56 947-Raúl Alfaro Arias
-Montes de Oca-San José-San Pedro-1-54 947-Marcel Soler Bonilla
+San Jose-San Jose-San Jose-1-288 054-Johnny Araya Monge
+Escazu-San Jose-Escazu-1-56 509-Arnoldo Barahona Cortes
+Desamparados-San Jose-Desamparados-1-208 411-Hazel Torres Hernandez
+Puriscal-San Jose-Santiago-1-33 004-Iris Cristina Arroyo Hererra
+Tarrazu-San Jose-San Marcos-1-16 280-Iris Cristina Arroyo Hererra
+Aserri-San Jose-Aserri-1-41 947-Ana Lucia Chavarria Vargas
+Mora-San Jose-Ciudad Colon-1-28 947-Gilberto Monge Aguilar
+Goicoechea-San Jose-Guadalupe-1-81 947-Russell Madrigal Valverde
+Santa Ana-San Jose-Santa Ana-1-288 054-Johnny Araya Monge
+Alajuelita-San Jose-Alajuelita-1-87 947-Roberto Chacon Paut
+Vasquez de Coronado-San Jose-San Isidro-1-23 947-Mauricio Vargas Rodriguez
+Acosta-San Jose-San Ignacio-1-20 947-Carlos Rafael Rodriguez Chaves
+Tibas-San Jose-San Juan-1-82 947-Carlos Cascante Cascante
+Moravia-San Jose-San Vicente-1-56 947-Raul Alfaro Arias
+Montes de Oca-San Jose-San Pedro-1-54 947-Marcel Soler Bonilla
 Grecia-Alajuela-Grecia-2-77 947-Luis Fernando Salazar Villalobos
-San Mateo-Alajuela-San Mateo-2-7 947-Jorge Arturo Rodríguez Araya
-Atenas-Alajuela-Atenas-2-27 947-Wilberth Martín Aguilar Gatjens
+San Mateo-Alajuela-San Mateo-2-7 947-Jorge Arturo Rodriguez Araya
+Atenas-Alajuela-Atenas-2-27 947-Wilberth Martin Aguilar Gatjens
 Naranjo-Alajuela-Naranjo-2-45 947-Luis Alberto Flores Chaves
-Palmares-Alajuela-Palmares-2-39 947-Humberto Rodríguez Barquero
-Poás-Alajuela-Poás-2-27 947-Rafael Ángel Araya Rodríguez
-Orotina-Alajuela-Orotina-2-23 947-Juan Carlos Vindas Calderón
-San Carlos-Alajuela-Quesada-2-181 947-Alonso Mora Chavarría
-Zarcero-Alajuela-Zarcero-2-22 947-Ricardo Alexander Benavides Hernández
-Valverde Vega-Alajuela-Sarchí-2-12 947-José Miguel Salas Vargas
-Upala-Alajuela-Upala-2-45 947-Allen Quirós Vargas
-Los Chiles-Alajuela-Los Chiles-2-23 947-José Joaquín Bermúdez Vargas
+Palmares-Alajuela-Palmares-2-39 947-Humberto Rodriguez Barquero
+Poas-Alajuela-Poas-2-27 947-Rafael angel Araya Rodriguez
+Orotina-Alajuela-Orotina-2-23 947-Juan Carlos Vindas Calderon
+San Carlos-Alajuela-Quesada-2-181 947-Alonso Mora Chavarria
+Zarcero-Alajuela-Zarcero-2-22 947-Ricardo Alexander Benavides Hernandez
+Valverde Vega-Alajuela-Sarchi-2-12 947-Jose Miguel Salas Vargas
+Upala-Alajuela-Upala-2-45 947-Allen Quiros Vargas
+Los Chiles-Alajuela-Los Chiles-2-23 947-Jose Joaquin Bermudez Vargas
 Guatuso-Alajuela-San Rafael-2-12 947-Mauricio Rojas Vargas
-Cartago-Cartago-Cartago-3-156 947-Rolando Rodríguez Brenes
-Paraíso-Cartago-Paraíso-3-43 947-Marcelo Solano Ortiz
-La Unión-Cartago-Tres Ríos-3-28 947-Mario Redondo Poveda
-Jiménez-Cartago-Juan Viñas-3-20 947-Carlos Rafael Rodríguez Chaves
-Turrialba-Cartago-Turrialba-3-73 947-Luis Fernando León Castro
-Alvarado-Cartago-Pacayas-3-16 947-José Luis Chacón Quesada
-Oreamuno-Cartago-San Rafael-3-23 947-Erick Mauricio Jiménez Valverde
-El Guarco-Cartago-Tejar-3-20 947-Carlos Rafael Rodríguez Chaves
-Heredia-Heredia-Heredia-4-123 947-José Manuel Ulate Avendaño
-Barva-Heredia-Barva-4-27 947-Jorge Antonio Acuña Prado
-Santo Domingo-Heredia-Santo Domingo-4-40 072-Roberto González Rodríguez
-Santa Bárbara-Heredia-Santa Bárbara-4-36 243-Víctor Manuel Hidalgo Solís
-San Rafael-Heredia-San Rafael-4-45 965-Erick Mauricio Jiménez Valverde
-San Isidro-Heredia-San Isidro-4-20 947-Carlos Rafael Rodríguez Chaves
-Belén-Heredia-San Antonio-4-62 947-Ricardo Alexander Benavides Hernández
-Flores-Heredia-San Joaquín-4-27 947-Eder José Ramírez Segura
-San Pablo-Heredia-San Pablo-4-7 947-Bernardo Porras López
-Sarapiquí-Heredia-Puerto Viejo-4-23 947-José Joaquín Bermúdez Vargas
-Liberia-Guanacaste-Liberia-5-67 947-Luis Gerardo Castañeda Díaz
-Nicoya-Guanacaste-Nicoya-5-49 947-Carlos Martín Quesada Castro
+Cartago-Cartago-Cartago-3-156 947-Rolando Rodriguez Brenes
+Paraiso-Cartago-Paraiso-3-43 947-Marcelo Solano Ortiz
+La Union-Cartago-Tres Rios-3-28 947-Mario Redondo Poveda
+Jimenez-Cartago-Juan Vinas-3-20 947-Carlos Rafael Rodriguez Chaves
+Turrialba-Cartago-Turrialba-3-73 947-Luis Fernando Leon Castro
+Alvarado-Cartago-Pacayas-3-16 947-Jose Luis Chacon Quesada
+Oreamuno-Cartago-San Rafael-3-23 947-Erick Mauricio Jimenez Valverde
+El Guarco-Cartago-Tejar-3-20 947-Carlos Rafael Rodriguez Chaves
+Heredia-Heredia-Heredia-4-123 947-Jose Manuel Ulate Avendano
+Barva-Heredia-Barva-4-27 947-Jorge Antonio Acuna Prado
+Santo Domingo-Heredia-Santo Domingo-4-40 072-Roberto Gonzalez Rodriguez
+Santa Barbara-Heredia-Santa Barbara-4-36 243-Victor Manuel Hidalgo Solis
+San Rafael-Heredia-San Rafael-4-45 965-Erick Mauricio Jimenez Valverde
+San Isidro-Heredia-San Isidro-4-20 947-Carlos Rafael Rodriguez Chaves
+Belen-Heredia-San Antonio-4-62 947-Ricardo Alexander Benavides Hernandez
+Flores-Heredia-San Joaquin-4-27 947-Eder Jose Ramirez Segura
+San Pablo-Heredia-San Pablo-4-7 947-Bernardo Porras Lopez
+Sarapiqui-Heredia-Puerto Viejo-4-23 947-Jose Joaquin Bermudez Vargas
+Liberia-Guanacaste-Liberia-5-67 947-Luis Gerardo Castaneda Diaz
+Nicoya-Guanacaste-Nicoya-5-49 947-Carlos Martin Quesada Castro
 Santa Cruz-Guanacaste-Santa Cruz-5-82 947-Jeffry Montoya Fuentes
-Bagaces-Guanacaste-Bagaces-5-20 947-Carlos Rafael Rodríguez Chaves
-Carrillo-Guanacaste-Filadelfia-5-23 947-Miguel Ángel Rodríguez Vargas
-Cañas-Guanacaste-Cañas-5-27 947-Luis Fernando León Castro
+Bagaces-Guanacaste-Bagaces-5-20 947-Carlos Rafael Rodriguez Chaves
+Carrillo-Guanacaste-Filadelfia-5-23 947-Miguel angel Rodriguez Vargas
+Canas-Guanacaste-Canas-5-27 947-Luis Fernando Leon Castro
 Abangares-Guanacaste-Las Juntas-5-12 947-Mauricio Rojas Vargas
-Tilarán-Guanacaste-Tilarán-5-20 947-Carlos Rafael Rodríguez Chaves
+Tilaran-Guanacaste-Tilaran-5-20 947-Carlos Rafael Rodriguez Chaves
 Nandayure-Guanacaste-Carmona-5-12 947-Mauricio Rojas Vargas
-La Cruz-Guanacaste-La Cruz-5-16 947-José Miguel Alfaro Arias
+La Cruz-Guanacaste-La Cruz-5-16 947-Jose Miguel Alfaro Arias
 Hojancha-Guanacaste-Hojancha-5-12 947-Mauricio Rojas Vargas
-Puntarenas-Puntarenas-Puntarenas-6-46 947-Roberto Céspedes Cisneros
-Esparza-Puntarenas-Espíritu Santo-6-31 947-Geovanny Alfaro Ramírez
-Buenos Aires-Puntarenas-Buenos Aires-6-31 947-José Miguel Alfaro Arias
+Puntarenas-Puntarenas-Puntarenas-6-46 947-Roberto Cespedes Cisneros
+Esparza-Puntarenas-Espiritu Santo-6-31 947-Geovanny Alfaro Ramirez
+Buenos Aires-Puntarenas-Buenos Aires-6-31 947-Jose Miguel Alfaro Arias
 Montes de Oro-Puntarenas-Miramar-6-12 947-Mauricio Rojas Vargas
-Osa-Puntarenas-Cortés-6-33 947-Alonso Mora Chavarría
+Osa-Puntarenas-Cortes-6-33 947-Alonso Mora Chavarria
 Quepos-Puntarenas-Quepos-6-27 947-Jong Kwan Kim Jin
-Golfito-Puntarenas-Golfito-6-20 947-Carlos Rafael Rodríguez Chaves
-Coto Brus-Puntarenas-San Vito-6-27 947-Steven Alberto Barrantes Núñez
+Golfito-Puntarenas-Golfito-6-20 947-Carlos Rafael Rodriguez Chaves
+Coto Brus-Puntarenas-San Vito-6-27 947-Steven Alberto Barrantes Nunez
 Parrita-Puntarenas-Parrita-6-12 947-Mauricio Rojas Vargas
 Corredores-Puntarenas-Corredor-6-27 947-Carlos Viales Fallas
-Garabito-Puntarenas-Jacó-6-20 947-Carlos Rafael Rodríguez Chaves
-Limón-Limón-Limón-7-94 415-Néstor Mattis Castro
-Pococí-Limón-Guápiles-7-125 947-Eduardo Rodríguez Chaverri
-Siquirres-Limón-Siquirres-7-27 947-Mangell McLean Villalobos
-Talamanca-Limón-Bribri-7-32 947-Walter Céspedes Umaña
-Matina-Limón-Matina-7-20 947-Carlos Rafael Rodríguez Chaves
-Guácimo-Limón-Guácimo-7-27 947-Gerardo Fuentes González
+Garabito-Puntarenas-Jaco-6-20 947-Carlos Rafael Rodriguez Chaves
+Limon-Limon-Limon-7-94 415-Nestor Mattis Castro
+Pococi-Limon-Guapiles-7-125 947-Eduardo Rodriguez Chaverri
+Siquirres-Limon-Siquirres-7-27 947-Mangell McLean Villalobos
+Talamanca-Limon-Bribri-7-32 947-Walter Cespedes Umana
+Matina-Limon-Matina-7-20 947-Carlos Rafael Rodriguez Chaves
+Guacimo-Limon-Guacimo-7-27 947-Gerardo Fuentes Gonzalez

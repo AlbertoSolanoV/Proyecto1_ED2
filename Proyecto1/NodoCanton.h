@@ -24,5 +24,6 @@ public:
 
     void Modificar(string, int);
     NodoCanton(Canton pCanton);
+
 };
 
