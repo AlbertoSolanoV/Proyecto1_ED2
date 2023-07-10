@@ -13,16 +13,19 @@ private:
     int obtenerFactorBalance(NodoCanton* nodo);
     NodoCanton* rotarDerecha(NodoCanton* y);
     NodoCanton* rotarIzquierda(NodoCanton* x);
-    NodoCanton* insertar(NodoCanton* pNodoCanton, Canton pCanton);
+    NodoCanton* insertar(NodoCanton* pNodoCanton, Canton* pCanton);
     void mostrar(NodoCanton* pNodoCanton);
     NodoCanton* buscar(string, NodoCanton*);
     void imprimirNodos(NodoCanton* nodo, int nivel);
+    void modifyCanton(string, NodoCanton*);
+    void displayData(NodoCanton*);
 
 public:
     ArbolCanton();
-    void insertar(Canton pCanton);
+    void insertar(Canton* pCanton);
     void mostrar();
     void imprimirNodos();
+    void modifyCanton(string);
     NodoCanton* buscarPorNombre(string);
 };
 

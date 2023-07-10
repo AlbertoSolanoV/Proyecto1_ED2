@@ -20,7 +20,8 @@ int main()
 		cout << "1. Insertar valores" << std::endl;
 		cout << "==== Menu del arbol AVL  Canton ====" << std::endl;
 		cout << "2. Realizar recorrido inorden" << std::endl;
-		cout << "3. Buscar canton por nombre" << std::endl;
+		cout << "3. Preguntar informacion detallada de un canton (nombre, poblacion, cabecera, etc)" << std::endl;
+		cout << "7. Modificar canton" << std::endl;
 		cout << "==== Menu del arbol RojoNegro ProvinciaCanton ====" << std::endl;
 		cout << "4. Insertar valor" << std::endl;
 		cout << "5. listar" << std::endl;
@@ -41,11 +42,8 @@ int main()
 			break;
 		case 3:
 			cout << "Digite el nombre del canton a buscar: ";
-
 			std::cin.ignore();
 			std::getline(std::cin, buscarCanton);
-
-
 			arbolCanton.buscarPorNombre(buscarCanton);
 			cout << endl;
 			break;
@@ -57,6 +55,13 @@ int main()
 			break;
 		case 6:
 			cout << "Hasta luego!" << endl;
+			break;
+		case 7:
+			cout << "Digite el nombre del canton a modificar: ";
+			std::cin.ignore();
+			std::getline(std::cin, buscarCanton);
+			arbolCanton.modifyCanton(buscarCanton);
+			cout << endl;
 			break;
 		default:
 			cout << "Opcion invalida. Por favor, intente nuevamente." << endl;

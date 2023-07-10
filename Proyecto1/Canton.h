@@ -23,6 +23,6 @@ public:
 	int  getCantidadPersona();
 	string getNombreAlcalde();
 
-	void modificar(string, int);
+	void modificar(string, string, int);
 };
 
