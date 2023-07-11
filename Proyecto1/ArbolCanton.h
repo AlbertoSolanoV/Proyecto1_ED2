@@ -20,6 +20,7 @@ private:
     void imprimirNodos(NodoCanton* nodo, int nivel);
     void modifyCanton(string, NodoCanton*);
     void displayData(NodoCanton*);
+    void llenarArbolPoblacion(ArbolCantonPoblacion& pArbolCantonPoblacion, NodoCanton* pNodoCanton);
 
 public:
     ArbolCanton();
@@ -27,7 +28,7 @@ public:
     void mostrar();
     void imprimirNodos();
     void modifyCanton(string);
-    NodoCanton* buscarPorNombre(string);
+    NodoCanton* buscarPorNombre(string, bool);
     void llenarArbolPoblacion(ArbolCantonPoblacion& pArbolCantonPoblacion);
 };
 

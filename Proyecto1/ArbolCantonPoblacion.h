@@ -15,14 +15,18 @@ private:
     int obtenerFactorBalance(NodoCanton* nodo);
     NodoCanton* rotarDerecha(NodoCanton* y);
     NodoCanton* rotarIzquierda(NodoCanton* x);
-    NodoCanton* insertar(NodoCanton* pNodoCanton, Canton pCanton);
+    NodoCanton* insertar(NodoCanton* pNodoCanton, Canton* pCanton);
     void mostrarMayor(NodoCanton* pNodoCanton);
     void mostrarMenor(NodoCanton* pNodoCanton);
+    void mostrarRango(int pRango, NodoCanton* pNodoCanton);
+    void displayData(NodoCanton*);
+
 
 public:
     ArbolCantonPoblacion();
-    void insertar(Canton pCanton);
+    void insertar(Canton* pCanton);
     void mostrarMayor();
     void mostrarMenor();
+    void mostrarRango(int pRango);
 };
 
