@@ -82,18 +82,18 @@ NodoCanton* ArbolCanton::insertar(NodoCanton* pNodoCanton, Canton* pCanton)
 	}
 
 	// Caso Derecha - Derecha
-	if (factorBalance < -1 && pCanton->getNombre().compare(pNodoCanton->getDerecha()->getCanton()->getNombre()) > 0 ) {
+	if (factorBalance < -1 && pCanton->getNombre().compare(pNodoCanton->getDerecha()->getCanton()->getNombre()) > 0) {
 		return rotarIzquierda(pNodoCanton);
 	}
 
 	// Caso Izquierda - Derecha
-	if (factorBalance > 1 && pCanton->getNombre().compare(pNodoCanton->getIzquierda()->getCanton()->getNombre()) >0 ) {
+	if (factorBalance > 1 && pCanton->getNombre().compare(pNodoCanton->getIzquierda()->getCanton()->getNombre()) > 0) {
 		pNodoCanton->setIzquierda(rotarIzquierda(pNodoCanton->getIzquierda()));
 		return rotarDerecha(pNodoCanton);
 	}
 
 	// Caso Derecha - Izquierda
-	if (factorBalance < -1 && pCanton->getNombre().compare(pNodoCanton->getDerecha()->getCanton()->getNombre()) <0 ) {
+	if (factorBalance < -1 && pCanton->getNombre().compare(pNodoCanton->getDerecha()->getCanton()->getNombre()) < 0) {
 		pNodoCanton->setDerecha(rotarDerecha(pNodoCanton->getDerecha()));
 		return rotarIzquierda(pNodoCanton);
 	}
@@ -107,9 +107,10 @@ void ArbolCanton::mostrar(NodoCanton* pNodoCanton)
 		return;
 	}
 
+
 	mostrar(pNodoCanton->getIzquierda());
 	/*cout << "--------------------------------------------------------------" << endl;
-	cout << pNodoCanton->getCanton()->getNombre() << " - " <<endl; 
+	cout << pNodoCanton->getCanton()->getNombre() << " - " <<endl;
 	if (pNodoCanton->getIzquierda() != nullptr) {
 		cout << "Izquierdo: ";
 		cout << pNodoCanton->getIzquierda()->getCanton()->getCabecera() << endl;
@@ -121,6 +122,19 @@ void ArbolCanton::mostrar(NodoCanton* pNodoCanton)
 	cout << "--------------------------------------------------------------" << endl;*/
 	cout << pNodoCanton->getCanton()->getNombre() << " - " << endl;
 	mostrar(pNodoCanton->getDerecha());
+}
+
+void ArbolCanton::llenarArbolPoblacion(ArbolCantonPoblacion& pArbolCantonPoblacion, NodoCanton* pNodoCanton)
+{
+
+	if (pNodoCanton == nullptr) {
+		return;
+	}
+
+	llenarArbolPoblacion(pArbolCantonPoblacion, pNodoCanton->getIzquierda());
+	pArbolCantonPoblacion.insertar(pNodoCanton->getCanton());
+	llenarArbolPoblacion(pArbolCantonPoblacion, pNodoCanton->getDerecha());
+
 }
 
 ArbolCanton::ArbolCanton()
@@ -138,17 +152,29 @@ void ArbolCanton::mostrar()
 	mostrar(raiz);
 }
 
-NodoCanton* ArbolCanton::buscarPorNombre(string pNombreCanton)
+NodoCanton* ArbolCanton::buscarPorNombre(string pNombreCanton, bool pMuestro)
 {
 	NodoCanton* canton = buscar(pNombreCanton, this->raiz);
-	if (canton != NULL) {
-		displayData(canton);
-		return canton;
-	}else{
-		cout << "No se ha encontrado el canton" << endl;
-		return NULL;
+	if (pMuestro) {
+		if (canton != NULL) {
+			displayData(canton);
+			return canton;
+		}
+		else {
+			cout << "No se ha encontrado el canton" << endl;
+			return NULL;
+		}
 	}
+	else
+		return NULL;
+
 }
+
+void ArbolCanton::llenarArbolPoblacion(ArbolCantonPoblacion& pArbolCantonPoblacion)
+{
+	llenarArbolPoblacion(pArbolCantonPoblacion, raiz);
+}
+
 
 void ArbolCanton::imprimirNodos()
 {
@@ -163,7 +189,7 @@ void ArbolCanton::modifyCanton(string _nombre)
 void ArbolCanton::modifyCanton(string _nombre, NodoCanton* _raiz)
 {
 	NodoCanton* _cantonNodo = this->buscar(_nombre, this->raiz);
-	if (_cantonNodo == NULL) 
+	if (_cantonNodo == NULL)
 	{
 		cout << "El canton no existe" << endl;
 		return;
@@ -219,7 +245,7 @@ NodoCanton* ArbolCanton::buscar(string pNombreCanton, NodoCanton* pNodoCanton)
 	if (pNodoCanton->getCanton()->getNombre() == pNombreCanton) {
 		return pNodoCanton;
 	}
-		
+
 	if (pNombreCanton < pNodoCanton->getCanton()->getNombre())
 		return buscar(pNombreCanton, pNodoCanton->getIzquierda());
 	else
@@ -227,10 +253,13 @@ NodoCanton* ArbolCanton::buscar(string pNombreCanton, NodoCanton* pNodoCanton)
 }
 
 void ArbolCanton::displayData(NodoCanton* _canton) {
+	cout << endl;
+	cout << "=================================" << endl;
 	cout << "Informacion del canton:" << endl;
 	cout << "Cabecera: " << _canton->getCanton()->getCabecera() << endl;
 	cout.flush();
 	cout << "Cantidad de habitantes: " << _canton->getCanton()->getCantidadPersona() << endl;
 	cout.flush();
 	cout << "Nombre del alcalde: " << _canton->getCanton()->getNombreAlcalde() << endl;
+	cout << "=================================" << endl;
 }

@@ -19,7 +19,6 @@ En el vector datos el orden es:
 3. Numero de provincia
 4. cantidad poblacion
 5. Nombre alcalde
-me falta poner los demas datos
 */
 void archivoLeer::leerArchivo(ArbolCanton& pArbolCanton, arbolProvinciaCanton& pArbolProvinciaCanton)
 {
@@ -38,11 +37,11 @@ void archivoLeer::leerArchivo(ArbolCanton& pArbolCanton, arbolProvinciaCanton& p
 			nuevoCanton->setNombreAlcalde(datos[5]);
 
 			pArbolCanton.insertar(nuevoCanton); //Insertamos en provincia Canton
-			NodoCanton* nodoCanton = pArbolCanton.buscarPorNombre(datos[0]);
+			NodoCanton* nodoCanton = pArbolCanton.buscarPorNombre(datos[0], false);
 			//Buscamos el nodo del canton registrado
 			pArbolProvinciaCanton.insertar(datos[3],datos[0],nodoCanton);
 
-			cout << linea << std::endl;  // Imprime la línea en la consola.
+			cout << "Canton: " <<datos[0] << " ingresado correctamente." << std::endl;  // Imprime la línea en la consola.
 		}
 		archivo.close();  // Cierra el archivo después de leerlo.
 	}
