@@ -89,8 +89,8 @@ void NodoProvinciaCanton::setCanton(string _canton)
 	this->canton = _canton;
 }
 
-void NodoProvinciaCanton::setPtrCanton(NodoCanton* ptrCanton)
+void NodoProvinciaCanton::setPtrCanton(NodoCanton* pPtrCanton)
 {
-	this->PtrCanton = ptrCanton;
+	this->PtrCanton = pPtrCanton;
 }
 

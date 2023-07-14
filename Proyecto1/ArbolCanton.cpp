@@ -155,7 +155,6 @@ void ArbolCanton::mostrar()
 NodoCanton* ArbolCanton::buscarPorNombre(string pNombreCanton, bool pMuestro)
 {
 	NodoCanton* canton = buscar(pNombreCanton, this->raiz);
-	if (pMuestro) {
 		if (canton != NULL) {
 			displayData(canton);
 			return canton;
@@ -164,9 +163,7 @@ NodoCanton* ArbolCanton::buscarPorNombre(string pNombreCanton, bool pMuestro)
 			cout << "No se ha encontrado el canton" << endl;
 			return NULL;
 		}
-	}
-	else
-		return NULL;
+	
 
 }
 

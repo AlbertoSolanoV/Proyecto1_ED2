@@ -16,6 +16,7 @@ int main()
 	int opcion;
 	archivoLeer leerDatos;
 	string buscarCanton;
+	string buscarInfoCantonXprovincia;
 	int rangoPoblacion;
 
 	do {
@@ -26,7 +27,7 @@ int main()
 		cout << "3. Preguntar informacion detallada de un canton (nombre, poblacion, cabecera, etc)" << std::endl;
 		cout << "7. Modificar canton" << std::endl;
 		cout << "==== Menu del arbol RojoNegro ProvinciaCanton ====" << std::endl;
-		cout << "4. Insertar valores en arbol" << std::endl;
+		cout << "4. Consultar informacion de los Cantones de una provincia" << std::endl;
 		cout << "5. listar por rango" << std::endl;
 		cout << "==== Menu del arbol CantonPoblacion ====" << std::endl;
 		cout << "8. Listar de mayor a menor poblacion" << std::endl;
@@ -55,6 +56,19 @@ int main()
 			cout << endl;
 			break;
 		case 4:
+			cout << "Digite el numero de la provincia de la que desea extrear los datos cantonales" << std::endl;
+			cout << "1. San Jose" << std::endl;
+			cout << "2.Alajuela" << std::endl;
+			cout << "3.Cartago" << std::endl;
+			cout << "4.Heredia" << std::endl;
+			cout << "5.Guanacaste" << std::endl;
+			cout << "6.Puntarenas" << std::endl;
+			cout << "7.Limon" << std::endl;
+			cout << "Digite el numero de la provincia de la que desea extrear los datos cantonales" << std::endl;
+			std::cin.ignore();
+			std::getline(std::cin, buscarInfoCantonXprovincia);
+			arbolProvinciaCanton.infoXprovincia(buscarInfoCantonXprovincia);
+			
 
 			break;
 		case 5:
