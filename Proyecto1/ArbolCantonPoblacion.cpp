@@ -160,6 +160,7 @@ void ArbolCantonPoblacion::mostrarRango(int pRango, NodoCanton* pNodoCanton)
 
 }
 
+
 void ArbolCantonPoblacion::displayData(NodoCanton* pCanton)
 {
 	cout << endl;

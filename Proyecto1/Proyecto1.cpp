@@ -21,32 +21,35 @@ int main()
 
 	do {
 		cout << "==== Menu ====" << std::endl;
-		cout << "1. Insertar valores" << std::endl;
-		cout << "==== Menu del arbol AVL  Canton ====" << std::endl;
-		cout << "2. Realizar recorrido inorden" << std::endl;
+		cout << "0. Insertar valores" << std::endl;
+		cout << "1. Modificar canton" << std::endl;
+		cout << "2. Consultar para una provincia : la cantidad de cantones y la población total." << std::endl;
 		cout << "3. Preguntar informacion detallada de un canton (nombre, poblacion, cabecera, etc)" << std::endl;
-		cout << "7. Modificar canton" << std::endl;
-		cout << "==== Menu del arbol RojoNegro ProvinciaCanton ====" << std::endl;
-		cout << "4. Consultar informacion de los Cantones de una provincia" << std::endl;
-		cout << "5. listar por rango" << std::endl;
-		cout << "==== Menu del arbol CantonPoblacion ====" << std::endl;
-		cout << "8. Listar de mayor a menor poblacion" << std::endl;
-		cout << "9. Listar de menor a mayor poblacion" << std::endl;
-		cout << "10. listar por rango(De mayor hasta el rango) poblacion" << std::endl;
-		cout << "6. Salir" << std::endl;
+		cout << "4. Mostrar detalle de datos de los cantones de una provincia" << std::endl;
+		cout << "5. Listar cantones del pais agrupados por provincia (Ordenado por nombre asc)" << std::endl;
+		cout << "6. Listar cantones del pais agrupados por provincia desc (Ordenado por nombre desc)" << std::endl;
+		cout << "7. Listar de mayor a menor poblacion" << std::endl;
+		cout << "8. Listar de menor a mayor poblacion" << std::endl;
+		cout << "9. listar por rango(De mayor hasta el rango) poblacion" << std::endl;
+		cout << "10. Salir" << std::endl;
 		cout << "Ingrese una opcion: ";
 		cin >> opcion;
 
 		switch (opcion) {
-		case 1:
+		case 0:
 			leerDatos.setNombreArchivo("cantones.txt");
 			leerDatos.leerArchivo(arbolCanton, arbolProvinciaCanton);
 			cout << "Archivo leido correctamente." << endl;
 			break;
-		case 2:
-			cout << "Recorrido inorden del arbol AVL: ";
-			arbolCanton.mostrar();
+		case 1:
+			cout << "Digite el nombre del canton a modificar: ";
+			std::cin.ignore();
+			std::getline(std::cin, buscarCanton);
+			arbolCanton.modifyCanton(buscarCanton);
 			cout << endl;
+			break;
+		case 2:
+			//Falta
 			break;
 		case 3:
 			cout << "Digite el nombre del canton a buscar: ";
@@ -55,7 +58,7 @@ int main()
 			arbolCanton.buscarPorNombre(buscarCanton, true);
 			cout << endl;
 			break;
-		case 4:
+		case 4: //Segun yo es lo mismo
 			cout << "Digite el numero de la provincia de la que desea extrear los datos cantonales" << std::endl;
 			cout << "1. San Jose" << std::endl;
 			cout << "2.Alajuela" << std::endl;
@@ -68,40 +71,38 @@ int main()
 			std::cin.ignore();
 			std::getline(std::cin, buscarInfoCantonXprovincia);
 			arbolProvinciaCanton.infoXprovincia(buscarInfoCantonXprovincia);
-			
-
 			break;
 		case 5:
-			arbolProvinciaCanton.listar();
-			break;
-		case 6:
-			cout << "Hasta luego!" << endl;
-			break;
-		case 7:
-			cout << "Digite el nombre del canton a modificar: ";
-			std::cin.ignore();
-			std::getline(std::cin, buscarCanton);
-			arbolCanton.modifyCanton(buscarCanton);
+			cout << "Cantones del pais ASC";
+			arbolProvinciaCanton.desplegarCantonesInOrder();
 			cout << endl;
 			break;
-		case 8:
+		case 6:
+			cout << "Cantones del pais DESC";
+			arbolProvinciaCanton.desplegarCantonesInOrderRevez();
+			cout << endl;
+			break;
+		case 7:
 			arbolCanton.llenarArbolPoblacion(arbolCantonPoblacion); //Se llena el arbol
 			cout << "------------------Menor - Mayor-------------------" << endl;
 			arbolCantonPoblacion.mostrarMenor();
 			arbolCantonPoblacion = ArbolCantonPoblacion(); //Se elimina el arbol viejo y se crea uno nuevo sin datos
 			break;
-		case 9:
+		case 8:
 			arbolCanton.llenarArbolPoblacion(arbolCantonPoblacion);//Se llena el arbol
 			cout << "---------------------Mayor - Menor---------------" << endl;
 			arbolCantonPoblacion.mostrarMayor();
 			arbolCantonPoblacion = ArbolCantonPoblacion();//Se elimina el arbol viejo y se crea uno nuevo sin datos
 			break;
-		case 10:
+		case 9:
 			arbolCanton.llenarArbolPoblacion(arbolCantonPoblacion);//Se llena el arbol
-			cout << "Defina un rango para la poblacion: "<<endl;
+			cout << "Defina un rango para la poblacion: " << endl;
 			cin >> rangoPoblacion;
 			arbolCantonPoblacion.mostrarRango(rangoPoblacion);
 			arbolCantonPoblacion = ArbolCantonPoblacion();//Se elimina el arbol viejo y se crea uno nuevo sin datos
+			break;
+		case 10:
+			cout << "Salir, Muchas gracias!" << endl;
 			break;
 		default:
 			cout << "Opcion invalida. Por favor, intente nuevamente." << endl;
@@ -109,7 +110,7 @@ int main()
 		}
 
 		cout << endl;
-	} while (opcion != 6);
+	} while (opcion != 10);
 
 	return 0;
 }

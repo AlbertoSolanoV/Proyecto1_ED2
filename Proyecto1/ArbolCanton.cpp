@@ -120,7 +120,8 @@ void ArbolCanton::mostrar(NodoCanton* pNodoCanton)
 		cout << pNodoCanton->getDerecha()->getCanton()->getCabecera() << endl;
 	}
 	cout << "--------------------------------------------------------------" << endl;*/
-	cout << pNodoCanton->getCanton()->getNombre() << " - " << endl;
+	cout << "Canton: " << pNodoCanton->getCanton()->getNombre() << endl;
+	displayData(pNodoCanton);
 	mostrar(pNodoCanton->getDerecha());
 }
 
@@ -156,7 +157,8 @@ NodoCanton* ArbolCanton::buscarPorNombre(string pNombreCanton, bool pMuestro)
 {
 	NodoCanton* canton = buscar(pNombreCanton, this->raiz);
 		if (canton != NULL) {
-			displayData(canton);
+			if(pMuestro)
+				displayData(canton);
 			return canton;
 		}
 		else {
@@ -250,7 +252,7 @@ NodoCanton* ArbolCanton::buscar(string pNombreCanton, NodoCanton* pNodoCanton)
 }
 
 void ArbolCanton::displayData(NodoCanton* _canton) {
-	cout << endl;
+	
 	cout << "=================================" << endl;
 	cout << "Informacion del canton:" << endl;
 	cout << "Cabecera: " << _canton->getCanton()->getCabecera() << endl;
@@ -259,4 +261,5 @@ void ArbolCanton::displayData(NodoCanton* _canton) {
 	cout.flush();
 	cout << "Nombre del alcalde: " << _canton->getCanton()->getNombreAlcalde() << endl;
 	cout << "=================================" << endl;
+	cout << endl;
 }
