@@ -1,5 +1,7 @@
 #include "arbolProvinciaCanton.h"
 #include <iostream>
+#include <vector>
+#include "archivoLeer.h"
 
 
 arbolProvinciaCanton::arbolProvinciaCanton()
@@ -26,10 +28,44 @@ void arbolProvinciaCanton::listartAyudante(NodoProvinciaCanton* raiz, string ind
         }
 
         int sColor = raiz->getColor() ? Rojo : Negro;
+        cout << raiz->getLlave();
         cout << raiz->getLlave() << "(" << sColor << ")" << endl;
         listartAyudante(raiz->getIzquierda(), indent, false);
         listartAyudante(raiz->getDerecha(), indent, true);
     }
+}
+// listar info por provincia:
+void arbolProvinciaCanton::infoXprovincia(string provincia)
+{
+    if (this->raiz) {
+        ayudanteMostrarInfoPorProvincia(this->raiz, true, provincia);
+    }
+}
+//ayudante para el metodo anterior:
+void arbolProvinciaCanton::ayudanteMostrarInfoPorProvincia(NodoProvinciaCanton* root, bool last, string key) {
+    if (root != this->nil) {
+
+        string llave= root->getLlave();
+        archivoLeer a =  archivoLeer();
+        vector<string> provincia = a.split(llave, '-');
+        
+
+        
+        if (provincia[0] == key) {
+            cout << "Canton:" << std::endl;
+            cout << "---------------------------------------------------------------" << std::endl;;
+            cout << "Nombre de Canton: "+ root->getPrtCanton()->getCanton()->getNombre() << std::endl;
+            cout << "Cabecera de canton: " + root->getPrtCanton()->getCanton()->getCabecera() << std::endl;
+            cout << "Alcalde: " + root->getPrtCanton()->getCanton()->getNombreAlcalde() << std::endl;
+            int poblacion = root->getPrtCanton()->getCanton()->getCantidadPersona();
+            string stri = to_string(poblacion);
+            cout << "Poblacion: " + stri << std::endl;
+            cout << "---------------------------------------------------------------" << std::endl;;
+        }
+        ayudanteMostrarInfoPorProvincia(root->getIzquierda(), false, key);
+        ayudanteMostrarInfoPorProvincia(root->getDerecha(), true, key);
+    }
+
 }
 
 void arbolProvinciaCanton::rightRotate(NodoProvinciaCanton* x) {

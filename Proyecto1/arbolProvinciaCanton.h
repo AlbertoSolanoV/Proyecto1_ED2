@@ -7,7 +7,7 @@ class arbolProvinciaCanton
 {
 
 
-private:
+    private:
     NodoProvinciaCanton* raiz;
     NodoProvinciaCanton* nil;
 
@@ -20,12 +20,14 @@ private:
     void transplant(NodoProvinciaCanton* u, NodoProvinciaCanton* v);
     void deleteFixup(NodoProvinciaCanton* x);
     void listartAyudante(NodoProvinciaCanton* root, string indent, bool last);
+    void ayudanteMostrarInfoPorProvincia(NodoProvinciaCanton* root, bool last,string key);
     NodoProvinciaCanton* buscarAyudante(NodoProvinciaCanton* node, string key);
-    
-public:
+
+    public:
 
     arbolProvinciaCanton();
     void insertar(string provincia, string canton, NodoCanton*);
+    void infoXprovincia(string provincia);
     void listar();
     //busca por llave
     NodoProvinciaCanton* buscar(string llave);
