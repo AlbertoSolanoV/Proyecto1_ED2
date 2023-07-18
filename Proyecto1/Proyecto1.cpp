@@ -49,7 +49,18 @@ int main()
 			cout << endl;
 			break;
 		case 2:
-			//Falta
+			cout << "Digite el numero de la provincia de la que desea extrear los datos cantonales" << std::endl;
+			cout << "1. San Jose" << std::endl;
+			cout << "2.Alajuela" << std::endl;
+			cout << "3.Cartago" << std::endl;
+			cout << "4.Heredia" << std::endl;
+			cout << "5.Guanacaste" << std::endl;
+			cout << "6.Puntarenas" << std::endl;
+			cout << "7.Limon" << std::endl;
+			cout << "Digite el numero de la provincia de la que desea extrear los datos cantonales" << std::endl;
+			std::cin.ignore();
+			std::getline(std::cin, buscarInfoCantonXprovincia);
+			arbolProvinciaCanton.buscarInformacionProvincia(buscarInfoCantonXprovincia);
 			break;
 		case 3:
 			cout << "Digite el nombre del canton a buscar: ";
@@ -58,7 +69,7 @@ int main()
 			arbolCanton.buscarPorNombre(buscarCanton, true);
 			cout << endl;
 			break;
-		case 4: //Segun yo es lo mismo
+		case 4: 
 			cout << "Digite el numero de la provincia de la que desea extrear los datos cantonales" << std::endl;
 			cout << "1. San Jose" << std::endl;
 			cout << "2.Alajuela" << std::endl;
