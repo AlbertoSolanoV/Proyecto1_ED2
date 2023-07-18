@@ -41,6 +41,7 @@ void arbolProvinciaCanton::infoXprovincia(string provincia)
 		ayudanteMostrarInfoPorProvincia(this->raiz, true, provincia);
 	}
 }
+
 //ayudante para el metodo anterior:
 void arbolProvinciaCanton::ayudanteMostrarInfoPorProvincia(NodoProvinciaCanton* root, bool last, string key) {
 	if (root != this->nil) {
@@ -103,7 +104,6 @@ void arbolProvinciaCanton::leftRotate(NodoProvinciaCanton* x) {
 	x->setPadre(y);
 
 }
-
 
 void arbolProvinciaCanton::insertFix(NodoProvinciaCanton* k) {
 	NodoProvinciaCanton* u;
@@ -219,8 +219,6 @@ void arbolProvinciaCanton::desplegarCantonesInOrderRevez()
 	desplegarInOrdenRevez(raiz);
 }
 
-
-
 NodoProvinciaCanton* arbolProvinciaCanton::buscarAyudante(NodoProvinciaCanton* node, string llave) {
 	if (node == this->nil || llave.compare(node->getLlave()) == 0) {
 		return node;
@@ -253,6 +251,40 @@ void arbolProvinciaCanton::desplegarInOrdenRevez(NodoProvinciaCanton* nodo)
 	cout << "Provincia: " << nodo->getProvinciaCode() << endl;
 	displayData(nodo->getPrtCanton());
 	desplegarInOrdenRevez(nodo->getIzquierda());
+}
+
+void arbolProvinciaCanton::buscarInformacionProvincia(string pProvincia)
+{
+	int cantones = 0;
+	int poblacion = 0;
+	buscarInfoProvincia(raiz,pProvincia, &cantones, &poblacion);
+}
+
+void arbolProvinciaCanton::buscarInfoProvincia(NodoProvinciaCanton* pNodo, string pProvincia, int* pCantones, int* pPoblacion)
+{
+
+	if (pNodo != this->nil) {
+		//Sacamos la llave de la provincia
+		string llave = pNodo->getLlave();
+		archivoLeer a = archivoLeer();
+		vector<string> provincia = a.split(llave, '-');
+
+		int res = provincia[0].compare(pProvincia);
+		//Comparamos que sea el mismo
+		if (res == 0) {
+			(*pCantones)++; 
+			*pPoblacion += pNodo->getPrtCanton()->getCanton()->getCantidadPersona();
+		}
+
+		buscarInfoProvincia(pNodo->getIzquierda(), pProvincia, pCantones, pPoblacion);
+		buscarInfoProvincia(pNodo->getDerecha(), pProvincia, pCantones, pPoblacion);
+		// Imprimir al finalizar el recorrido
+		if (pNodo == raiz) {
+			cout << "Cantidad de cantones: " << *pCantones << endl;
+			cout << "Cantidad de poblacion total: " << *pPoblacion << endl;
+		}
+	}
+
 }
 
 void arbolProvinciaCanton::displayData(NodoCanton* _canton) {

@@ -24,12 +24,14 @@ class arbolProvinciaCanton
     NodoProvinciaCanton* buscarAyudante(NodoProvinciaCanton* node, string key);
     void desplegarInOrden(NodoProvinciaCanton*);
     void desplegarInOrdenRevez(NodoProvinciaCanton*);
+    void buscarInfoProvincia(NodoProvinciaCanton*, string pProvincia, int* pCantones, int* pPoblacion);
     void displayData(NodoCanton*);
 
     public:
     arbolProvinciaCanton();
     void insertar(string provincia, string canton, NodoCanton*);
     void infoXprovincia(string provincia);
+    void buscarInformacionProvincia(string provincia);
     void listar();
     //busca por llave
     NodoProvinciaCanton* buscar(string llave);
