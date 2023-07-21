@@ -37,6 +37,7 @@ class arbolProvinciaCanton
     NodoProvinciaCanton* buscar(string llave);
     void desplegarCantonesInOrder();
     void desplegarCantonesInOrderRevez();
+    bool validarProvincia(string pProvincia);
 
 };
 

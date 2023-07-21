@@ -219,6 +219,15 @@ void arbolProvinciaCanton::desplegarCantonesInOrderRevez()
 	desplegarInOrdenRevez(raiz);
 }
 
+bool arbolProvinciaCanton::validarProvincia(string pProvincia)
+{
+	int provinciaInt = stoi(pProvincia);
+	if (provinciaInt > 0 && provinciaInt < 8)
+		return true;
+	else
+		return false;
+}
+
 NodoProvinciaCanton* arbolProvinciaCanton::buscarAyudante(NodoProvinciaCanton* node, string llave) {
 	if (node == this->nil || llave.compare(node->getLlave()) == 0) {
 		return node;
