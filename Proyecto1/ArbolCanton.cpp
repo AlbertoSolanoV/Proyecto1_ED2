@@ -195,14 +195,26 @@ void ArbolCanton::modifyCanton(string _nombre, NodoCanton* _raiz)
 	}
 	string alcalde;
 	string cabecera;
+	string poblacionString;
 	int poblacion;
 	std::cin.ignore();
 	cout << "ingrese el nombre de alcalde" << endl;
 	std::getline(std::cin, alcalde);
 	cout << "ingrese el distrito de cabecera" << endl;
 	std::getline(std::cin, cabecera);
-	cout << "ingrese la poblacion" << endl;
-	cin >> poblacion;
+	bool incorrect = true;
+	do {
+		try {
+			cout << "ingrese la poblacion" << endl;
+			std::getline(std::cin, poblacionString);
+			poblacion = stoi(poblacionString);
+			incorrect = false;
+		}
+		catch (const std::exception e) {
+			cout << "Debe de ser un numero! Nuevamente: " << endl;
+		}
+	} while (incorrect);
+
 
 	if (alcalde != "" && _cantonNodo->getCanton()->getNombreAlcalde().compare(alcalde) != 0)
 		_cantonNodo->getCanton()->setNombreAlcalde(alcalde);
