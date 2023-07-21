@@ -163,11 +163,13 @@ void ArbolCantonPoblacion::mostrarRango(int pRango, NodoCanton* pNodoCanton)
 
 void ArbolCantonPoblacion::displayData(NodoCanton* pCanton)
 {
-	cout << endl;
 	cout << "=================================" << endl;
-	cout << "Canton: " << pCanton->getCanton()->getNombre() << endl;
+	cout << "Informacion del canton:" << pCanton->getCanton()->getNombre() << endl;
+	cout << "Cabecera: " << pCanton->getCanton()->getCabecera() << endl;
 	cout.flush();
 	cout << "Cantidad de habitantes: " << pCanton->getCanton()->getCantidadPersona() << endl;
 	cout.flush();
+	cout << "Nombre del alcalde: " << pCanton->getCanton()->getNombreAlcalde() << endl;
 	cout << "=================================" << endl;
+	cout << endl;
 }
