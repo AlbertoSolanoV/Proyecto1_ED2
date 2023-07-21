@@ -95,7 +95,11 @@ int main()
 			cout << "Digite el numero de la provincia de la que desea extrear los datos cantonales" << std::endl;
 			std::cin.ignore();
 			std::getline(std::cin, buscarInfoCantonXprovincia);
-			arbolProvinciaCanton.infoXprovincia(buscarInfoCantonXprovincia);
+			if (arbolProvinciaCanton.validarProvincia(buscarInfoCantonXprovincia))
+				arbolProvinciaCanton.infoXprovincia(buscarInfoCantonXprovincia);
+			else
+				cout << "Digito no valido, seleccione del 1 al 7" << std::endl;
+
 			break;
 		case 5:
 			cout << "Cantones del pais ASC";
