@@ -14,6 +14,7 @@ int main()
 	ArbolCanton arbolCanton;
 	arbolProvinciaCanton arbolProvinciaCanton;
 	int opcion;
+	string opcionString;
 	archivoLeer leerDatos;
 	string buscarCanton;
 	string buscarInfoCantonXprovincia;
@@ -32,8 +33,18 @@ int main()
 		cout << "8. Listar de menor a mayor poblacion" << std::endl;
 		cout << "9. listar por rango(De mayor hasta el rango) poblacion" << std::endl;
 		cout << "10. Salir" << std::endl;
-		cout << "Ingrese una opcion: ";
-		cin >> opcion;
+		bool incorrect = true;
+		do {
+			try {
+				cout << "Ingrese una opcion: ";
+				std::getline(std::cin, opcionString);
+				opcion = stoi(opcionString);
+				incorrect = false;
+			}
+			catch (const std::exception e) {
+				cout << "Debe de ser un numero! Nuevamente: " << endl;
+			}
+		} while (incorrect);
 
 		switch (opcion) {
 		case 0:
@@ -43,7 +54,6 @@ int main()
 			break;
 		case 1:
 			cout << "Digite el nombre del canton a modificar: ";
-			std::cin.ignore();
 			std::getline(std::cin, buscarCanton);
 			arbolCanton.modifyCanton(buscarCanton);
 			cout << endl;
