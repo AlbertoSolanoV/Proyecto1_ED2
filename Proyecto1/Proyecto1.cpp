@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#include "Micelaneos.h"
+#include <iostream>
 #include <string>
 #include "ArbolCanton.h"
 #include "ArbolCantonPoblacion.h"
@@ -18,7 +19,8 @@ int main()
 	archivoLeer leerDatos;
 	string buscarCanton;
 	string buscarInfoCantonXprovincia;
-	int rangoPoblacion;
+	string rangoPoblacion;
+	Micelaneos micelaneos;
 
 	do {
 		cout << "==== Menu ====" << std::endl;
@@ -123,9 +125,19 @@ int main()
 		case 9:
 			arbolCanton.llenarArbolPoblacion(arbolCantonPoblacion);//Se llena el arbol
 			cout << "Defina un rango para la poblacion: " << endl;
+
+
 			cin >> rangoPoblacion;
-			arbolCantonPoblacion.mostrarRango(rangoPoblacion);
-			arbolCantonPoblacion = ArbolCantonPoblacion();//Se elimina el arbol viejo y se crea uno nuevo sin datos
+			if (micelaneos.contieneLetras(rangoPoblacion))
+			{
+				cout << "Solo se permite el ingreso de numeros";
+				break;
+			}
+			else {
+				arbolCantonPoblacion.mostrarRango(stoi( rangoPoblacion));
+				arbolCantonPoblacion = ArbolCantonPoblacion();//Se elimina el arbol viejo y se crea uno nuevo sin datos
+			}
+
 			break;
 		case 10:
 			cout << "Salir, Muchas gracias!" << endl;

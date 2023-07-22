@@ -144,6 +144,7 @@
     <ClCompile Include="arbolProvinciaCanton.cpp" />
     <ClCompile Include="archivoLeer.cpp" />
     <ClCompile Include="Canton.cpp" />
+    <ClCompile Include="Micelaneos.cpp" />
     <ClCompile Include="NodoCanton.cpp" />
     <ClCompile Include="NodoProvinciaCanton.cpp" />
     <ClCompile Include="Proyecto1.cpp" />
@@ -154,6 +155,7 @@
     <ClInclude Include="arbolProvinciaCanton.h" />
     <ClInclude Include="archivoLeer.h" />
     <ClInclude Include="Canton.h" />
+    <ClInclude Include="Micelaneos.h" />
     <ClInclude Include="NodoProvinciaCanton.h" />
     <ClInclude Include="NodoCanton.h" />
   </ItemGroup>
