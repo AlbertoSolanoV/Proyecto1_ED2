@@ -68,7 +68,6 @@ int main()
 			cout << "6.Puntarenas" << std::endl;
 			cout << "7.Limon" << std::endl;
 			cout << "Digite el numero de la provincia de la que desea extrear los datos cantonales" << std::endl;
-			std::cin.ignore();
 			std::getline(std::cin, buscarInfoCantonXprovincia);
 			if(arbolProvinciaCanton.validarProvincia(buscarInfoCantonXprovincia))
 				arbolProvinciaCanton.buscarInformacionProvincia(buscarInfoCantonXprovincia);
@@ -78,7 +77,6 @@ int main()
 			break;
 		case 3:
 			cout << "Digite el nombre del canton a buscar: ";
-			std::cin.ignore();
 			std::getline(std::cin, buscarCanton);
 			arbolCanton.buscarPorNombre(buscarCanton, true);
 			cout << endl;
@@ -93,7 +91,6 @@ int main()
 			cout << "6.Puntarenas" << std::endl;
 			cout << "7.Limon" << std::endl;
 			cout << "Digite el numero de la provincia de la que desea extrear los datos cantonales" << std::endl;
-			std::cin.ignore();
 			std::getline(std::cin, buscarInfoCantonXprovincia);
 			if (arbolProvinciaCanton.validarProvincia(buscarInfoCantonXprovincia))
 				arbolProvinciaCanton.infoXprovincia(buscarInfoCantonXprovincia);
