@@ -1,5 +1,6 @@
 #pragma once
 #include "NodoProvinciaCanton.h"
+#include "Micelaneos.h"
 #include <string>
 using namespace std;
 

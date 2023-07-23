@@ -221,6 +221,12 @@ void arbolProvinciaCanton::desplegarCantonesInOrderRevez()
 
 bool arbolProvinciaCanton::validarProvincia(string pProvincia)
 {
+	Micelaneos micelaneos;
+
+	if (micelaneos.contieneLetras(pProvincia))
+	{
+		return false;
+	}
 	int provinciaInt = stoi(pProvincia);
 	if (provinciaInt > 0 && provinciaInt < 8)
 		return true;
