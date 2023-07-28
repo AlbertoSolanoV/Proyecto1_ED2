@@ -42,6 +42,9 @@
     <ClCompile Include="Micelaneos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GrafoCantones.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArbolCanton.h">
@@ -66,6 +69,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Micelaneos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GrafoCantones.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
