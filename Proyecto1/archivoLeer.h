@@ -1,6 +1,7 @@
 #pragma once
 #include "ArbolCanton.h"
 #include "arbolProvinciaCanton.h"
+#include "GrafoCantones.h"
 #include "Canton.h"
 #include <string>
 #include <fstream>
