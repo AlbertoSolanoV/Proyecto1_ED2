@@ -15,6 +15,8 @@ private:
     std::unordered_map<std::string, std::vector<Arista>> listaAdyacencia;
 
 public:
+    GrafoCantones();
+
     // Agregar un cantón (nodo) al grafo
     void agregarCanton(const std::string& canton);
 

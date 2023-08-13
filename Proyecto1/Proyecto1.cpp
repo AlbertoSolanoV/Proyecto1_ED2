@@ -6,7 +6,7 @@
 #include "arbolProvinciaCanton.h"
 #include "Canton.h"
 #include "archivoLeer.h"
-#include "GrafoCantones.h"
+#include "GrafoCantonesGestor.h"
 
 using namespace std;
 
@@ -22,11 +22,12 @@ int main()
 	string buscarInfoCantonXprovincia;
 	string rangoPoblacion;
 	Micelaneos micelaneos;
+	GrafoCantonesGestor* gestor;
+
 	//variables para los grafos
-	GrafoCantones grafoCanton;
+	string consultaProvincia;
 	std::string cantonInicio;
 	std::string cantonDestino;
-	std::vector<std::string> ruta;
 
 	do {
 		cout << "==== Menu ====" << std::endl;
@@ -147,33 +148,17 @@ int main()
 
 			break;
 		case 11:
-			
-			// Agregar cantones al grafo
-			grafoCanton.agregarCanton("1-San Jose");
-			grafoCanton.agregarCanton("1-Heredia");
-			grafoCanton.agregarCanton("1-Alajuela");
-			grafoCanton.agregarCanton("2-Cartago");
-			grafoCanton.agregarCanton("2-Cartago Norte");
-			grafoCanton.agregarCanton("1-Tibas");
+			//opcion llenar grafo
+			gestor = new GrafoCantonesGestor();
+			gestor->llenarGrafos();
 
-			// Agregar aristas con peso entre los cantones
-			grafoCanton.agregarArista("1-San Jose", "1-Heredia", 10);
-			grafoCanton.agregarArista("1-San Jose", "1-Alajuela", 20);
-			grafoCanton.agregarArista("1-Heredia", "2-Cartago", 15);
-			grafoCanton.agregarArista("2-Cartago", "1-San Jose", 5);
-			grafoCanton.agregarArista("1-Heredia", "2-Cartago Norte", 12);
-			grafoCanton.agregarArista("1-Tibas", "1-Alajuela", 8);
 
-			cantonInicio = "1-San Jose";
-			cantonDestino = "1-Tibas";
-			ruta = grafoCanton.rutaMasCorta(cantonInicio, cantonDestino);
+			//opcion ruta mas corta
+			consultaProvincia = "San José";
+			cantonInicio = "San José";
+			cantonDestino = "Tibas";
+			gestor->rutaMasCorta(consultaProvincia, cantonInicio, cantonDestino);
 
-			// Mostrar la ruta más corta
-			cout << "Ruta más corta entre " << cantonInicio << " y " << cantonDestino << ":" << std::endl;
-			for (const auto& canton : ruta) {
-				cout << canton << " -> ";
-			}
-			cout << std::endl;
 
 			break;
 		case 10:

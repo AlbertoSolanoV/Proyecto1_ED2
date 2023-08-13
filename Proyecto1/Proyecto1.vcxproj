@@ -145,6 +145,7 @@
     <ClCompile Include="archivoLeer.cpp" />
     <ClCompile Include="Canton.cpp" />
     <ClCompile Include="GrafoCantones.cpp" />
+    <ClCompile Include="GrafoCantonesGestor.cpp" />
     <ClCompile Include="Micelaneos.cpp" />
     <ClCompile Include="NodoCanton.cpp" />
     <ClCompile Include="NodoProvinciaCanton.cpp" />
@@ -157,6 +158,7 @@
     <ClInclude Include="archivoLeer.h" />
     <ClInclude Include="Canton.h" />
     <ClInclude Include="GrafoCantones.h" />
+    <ClInclude Include="GrafoCantonesGestor.h" />
     <ClInclude Include="Micelaneos.h" />
     <ClInclude Include="NodoProvinciaCanton.h" />
     <ClInclude Include="NodoCanton.h" />

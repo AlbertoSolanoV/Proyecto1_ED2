@@ -45,6 +45,9 @@
     <ClCompile Include="GrafoCantones.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GrafoCantonesGestor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArbolCanton.h">
@@ -72,6 +75,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GrafoCantones.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GrafoCantonesGestor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

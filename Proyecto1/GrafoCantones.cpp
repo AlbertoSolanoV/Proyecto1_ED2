@@ -1,5 +1,9 @@
 #include "GrafoCantones.h"
 #include <queue>
+
+GrafoCantones::GrafoCantones() {
+}
+
 // Agregar un cantón (nodo) al grafo
 void GrafoCantones::agregarCanton(const std::string& canton) {
 	listaAdyacencia[canton] = std::vector<Arista>();
