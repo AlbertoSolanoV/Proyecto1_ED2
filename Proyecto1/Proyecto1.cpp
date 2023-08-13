@@ -154,9 +154,9 @@ int main()
 
 
 			//opcion ruta mas corta
-			consultaProvincia = "San Jose";
-			cantonInicio = "1-San Jose";
-			cantonDestino = "1-Tibas";
+			consultaProvincia = "San José";
+			cantonInicio = "San José";
+			cantonDestino = "Tibas";
 			gestor->rutaMasCorta(consultaProvincia, cantonInicio, cantonDestino);
 
 

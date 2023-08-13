@@ -28,17 +28,18 @@ public:
 	//Dada una provincia la ruta mas corta del canton
 	void rutaMasCorta(string provincia, string cantonInicio, string cantonDestino);
 
+	//Valida si la provincia ingresada es valida
+	bool validarProvincias(string provincia);
 
-
-	//Enum de
-	enum PROVINCIAS {
-		SJO = 1,
-		ALA = 2,
-		CAR = 3,
-		HER = 4,
-		GUA = 5,
-		PUN = 6,
-		LIM = 7
+	//Arreglo de las princias a validar
+	vector<string> PROVINCIAS  = {
+		"San José",
+		"Alajuela",
+		"Cartago",
+		"Guanacaste",
+		"Heredia",
+		"Limón",
+		"Puntarenas"
 	};
 };
 

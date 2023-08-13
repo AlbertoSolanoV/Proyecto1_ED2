@@ -12,33 +12,45 @@ void GrafoCantonesGestor::llenarGrafos()
 	*/
 
 // Agregar cantones al grafo
-	grafoCantonSjo->agregarCanton("1-San Jose");
-	grafoCantonSjo->agregarCanton("1-Heredia");
-	grafoCantonSjo->agregarCanton("1-Alajuela");
-	grafoCantonSjo->agregarCanton("2-Cartago");
-	grafoCantonSjo->agregarCanton("2-Cartago Norte");
-	grafoCantonSjo->agregarCanton("1-Tibas");
+	grafoCantonSjo->agregarCanton("San José");
+	grafoCantonSjo->agregarCanton("Heredia");
+	grafoCantonSjo->agregarCanton("Alajuela");
+	grafoCantonSjo->agregarCanton("Cartago");
+	grafoCantonSjo->agregarCanton("Cartago Norte");
+	grafoCantonSjo->agregarCanton("Tibas");
 
 	// Agregar aristas con peso entre los cantones
-	grafoCantonSjo->agregarArista("1-San Jose", "1-Heredia", 10);
-	grafoCantonSjo->agregarArista("1-San Jose", "1-Alajuela", 20);
-	grafoCantonSjo->agregarArista("1-Heredia", "2-Cartago", 15);
-	grafoCantonSjo->agregarArista("2-Cartago", "1-San Jose", 5);
-	grafoCantonSjo->agregarArista("1-Heredia", "2-Cartago Norte", 12);
-	grafoCantonSjo->agregarArista("1-Tibas", "1-Alajuela", 8);
+	grafoCantonSjo->agregarArista("San José", "Heredia", 10);
+	grafoCantonSjo->agregarArista("San José", "Alajuela", 20);
+	grafoCantonSjo->agregarArista("Heredia", "Cartago", 15);
+	grafoCantonSjo->agregarArista("Cartago", "San José", 5);
+	grafoCantonSjo->agregarArista("Heredia", "Cartago Norte", 12);
+	grafoCantonSjo->agregarArista("Tibas", "Alajuela", 8);
 
 }
 
 void GrafoCantonesGestor::rutaMasCorta(string provincia, string cantonInicio, string cantonDestino)
 {
-	ruta = grafoCantonSjo->rutaMasCorta(cantonInicio, cantonDestino);
+	//validar la pricia y el canton
+	if (validarProvincias(provincia)) {
+		ruta = grafoCantonSjo->rutaMasCorta(cantonInicio, cantonDestino);
 
-	// Mostrar la ruta más corta
-	cout << "Ruta más corta entre " << cantonInicio << " y " << cantonDestino << ":" << std::endl;
-	for (const auto& canton : ruta) {
-		cout << canton << " -> ";
+		// Mostrar la ruta más corta
+		cout << "Ruta más corta entre " << cantonInicio << " y " << cantonDestino << ":" << std::endl;
+		for (const auto& canton : ruta) {
+			cout << canton << " -> ";
+		}
+		cout << std::endl;
 	}
-	cout << std::endl;
+	else
+	{
+		cout << "La provincia ingresada no es valida" << endl;
+	}
+}
+
+bool GrafoCantonesGestor::validarProvincias(string provincia)
+{
+	return std::find(PROVINCIAS.begin(), PROVINCIAS.end(), provincia) != PROVINCIAS.end();
 }
 
 //inicializa los grafos
