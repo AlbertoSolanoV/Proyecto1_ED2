@@ -32,7 +32,7 @@ public:
 	bool validarProvincias(string provincia);
 
 	//Arreglo de las princias a validar
-	vector<string> PROVINCIAS  = {
+	const vector<string> PROVINCIAS  = {
 		"San José",
 		"Alajuela",
 		"Cartago",
