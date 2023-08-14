@@ -6,8 +6,8 @@ void GrafoCantonesGestor::llenarGrafos()
 
 
 	//Envia los grafos creados al metodo de lectura de txt
-	vector<shared_ptr<GrafoCantones>> listaObjs;
-	listaObjs.push_back(std::make_shared<GrafoCantones>("hola"));
+	//vector<shared_ptr<GrafoCantones>> listaObjs;
+	//listaObjs.push_back(std::make_shared<GrafoCantones>("hola"));
 	/*Debe de ser cambiado al metedo de lectura
 	* Se deben de enviar todos los grafos creados para que se les asigne la data
 	*/
@@ -57,13 +57,13 @@ bool GrafoCantonesGestor::validarProvincias(string provincia)
 //inicializa los grafos
 void GrafoCantonesGestor::inicializarGrafos()
 {
-	grafoCantonSjo = new GrafoCantones("sanjose.csv");
-	grafoCantonAla = new GrafoCantones("alajuela.csv");
-	grafoCantonCar = new GrafoCantones("cartago.csv");
-	grafoCantonHer = new GrafoCantones("heredia.csv");
-	grafoCantonPun = new GrafoCantones("puntarenas.csv");
-	grafoCantonLim = new GrafoCantones("limon.csv");
-	grafoCantonGua = new GrafoCantones("guanacaste.csv");
+	grafoCantonSjo = new GrafoCantones();
+	grafoCantonAla = new GrafoCantones();
+	grafoCantonCar = new GrafoCantones();
+	grafoCantonHer = new GrafoCantones();
+	grafoCantonPun = new GrafoCantones();
+	grafoCantonLim = new GrafoCantones();
+	grafoCantonGua = new GrafoCantones();
 }
 
 GrafoCantonesGestor::GrafoCantonesGestor()

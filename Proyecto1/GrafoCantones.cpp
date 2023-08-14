@@ -4,8 +4,6 @@
 GrafoCantones::GrafoCantones() {
 }
 
-GrafoCantones::GrafoCantones(string nombreArchivo) {
-}
 
 // Agregar un cantón (nodo) al grafo
 void GrafoCantones::agregarCanton(const std::string& canton) {
@@ -66,13 +64,4 @@ std::vector<std::string>  GrafoCantones::rutaMasCorta(const std::string& cantonI
 	}
 
 	return ruta;
-}
-
-string GrafoCantones::getNombreArchivo() {
-	return nombreArchivo;
-}
-
-
-void GrafoCantones::setNombreArchivo(const string & value) {
-	nombreArchivo = value;
 }

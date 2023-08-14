@@ -15,14 +15,11 @@ class GrafoCantones
 {
 private:
     std::unordered_map<std::string, std::vector<Arista>> listaAdyacencia;
-    string nombreArchivo;
 
 public:
 
 
     GrafoCantones();
-
-    GrafoCantones(string nombreArchivo);
 
     // Agregar un cantón (nodo) al grafo
     void agregarCanton(const std::string& canton);
@@ -36,7 +33,4 @@ public:
     // Encontrar la ruta más corta desde un cantón de inicio a otro cantón de destino dentro de la misma provincia
     std::vector<std::string> rutaMasCorta(const std::string& cantonInicio, const std::string& cantonDestino);
 
-    string getNombreArchivo();
-
-    void setNombreArchivo(const string& value);
 };
