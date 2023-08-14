@@ -3,6 +3,8 @@
 #include <vector>
 #include <string>
 #include <unordered_map>
+using namespace std;
+
 
 struct Arista {
     std::string cantonDestino;
@@ -15,6 +17,8 @@ private:
     std::unordered_map<std::string, std::vector<Arista>> listaAdyacencia;
 
 public:
+
+
     GrafoCantones();
 
     // Agregar un cantón (nodo) al grafo
@@ -28,4 +32,5 @@ public:
 
     // Encontrar la ruta más corta desde un cantón de inicio a otro cantón de destino dentro de la misma provincia
     std::vector<std::string> rutaMasCorta(const std::string& cantonInicio, const std::string& cantonDestino);
+
 };

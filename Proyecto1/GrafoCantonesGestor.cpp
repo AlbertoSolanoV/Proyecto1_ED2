@@ -6,7 +6,8 @@ void GrafoCantonesGestor::llenarGrafos()
 
 
 	//Envia los grafos creados al metodo de lectura de txt
-	
+	//vector<shared_ptr<GrafoCantones>> listaObjs;
+	//listaObjs.push_back(std::make_shared<GrafoCantones>("hola"));
 	/*Debe de ser cambiado al metedo de lectura
 	* Se deben de enviar todos los grafos creados para que se les asigne la data
 	*/

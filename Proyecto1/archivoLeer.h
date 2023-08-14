@@ -6,6 +6,7 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <memory> // Necesario para std::shared_ptr
 
 using namespace std;
 
@@ -20,6 +21,12 @@ public:
 
 	void leerArchivo(ArbolCanton&, arbolProvinciaCanton&);
 	vector<string> split(const std::string& cadena, char delimitador);
+
+	/*lee una lista de objetos
+	* reference_wrapper -> se utiliza para poder tener referencia a los objetos
+	* mejora la gestion de memoria por las referencias
+	*/
+	void leerCSVProvincia(vector<std::shared_ptr<GrafoCantones>> listaGrafos);
 
 };
 
