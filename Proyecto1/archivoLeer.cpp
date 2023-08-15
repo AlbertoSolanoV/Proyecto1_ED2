@@ -1,7 +1,7 @@
 #include "archivoLeer.h"
 #include <vector>
 #include <iomanip>
-
+#include "GrafoCantonesGestor.h"
 void archivoLeer::setNombreArchivo(string pNombreArchivo)
 {
 	this->nombreArchivo = pNombreArchivo;
@@ -72,6 +72,115 @@ vector<string> archivoLeer::split(const std::string& cadena, char delimitador)
 	return tokens;
 }
 
-void leerCSVProvincia(vector<std::shared_ptr<GrafoCantones>> listaGrafos) {
 
+void archivoLeer::leerCSVProvincia(GrafoCantones& grafoSJ, GrafoCantones& grafoH, GrafoCantones& grafoC, GrafoCantones& grafoA, GrafoCantones& grafoP, GrafoCantones& grafoG, GrafoCantones& grafoL) {
+
+
+	//recorre agregando los cantones
+	ifstream archivo(this->nombreArchivo);
+
+	if (archivo.is_open()) {
+		string linea;
+
+		vector<string> cantAgregados;
+
+		
+		//recorre el archivo
+		while (getline(archivo, linea)) {
+			
+			//recorre la linea del archivo
+			vector<string> datos = split(linea, ',');
+			
+			bool existe = find(cantAgregados.begin(), cantAgregados.end(), datos[1]) != cantAgregados.end();
+
+			if (!existe)
+			{
+				cantAgregados.push_back(datos[1]);
+
+				//valida el numero de la provicia para agregar al grafo
+				switch (stoi(datos[0])) {
+				case GrafoCantonesGestor::SANJOSE:
+					grafoSJ.agregarCanton(datos[1]);
+					break;
+				case GrafoCantonesGestor::ALAJUELA:
+					grafoA.agregarCanton(datos[1]);
+					break;
+				case GrafoCantonesGestor::CARTAGO:
+					grafoC.agregarCanton(datos[1]);
+					break;
+				case GrafoCantonesGestor::HEREDIA:
+					grafoH.agregarCanton(datos[1]);
+					break;
+				case GrafoCantonesGestor::GUNACASTE:
+					grafoG.agregarCanton(datos[1]);
+					break;
+				case GrafoCantonesGestor::PUNTARENAS:
+					grafoP.agregarCanton(datos[1]);
+					break;
+				case GrafoCantonesGestor::LIMON:
+					grafoL.agregarCanton(datos[1]);
+					break;
+				default:
+					std::cout << "Invalid value entered. Please enter a value between 1 and 7." << std::endl;
+					break;
+				}
+			}
+
+		}
+		archivo.close();  // Cierra el archivo después de leerlo.
+	}
+	else {
+		cout << "No se pudo abrir el archivo." << std::endl;
+	}
+
+
+	//recorre agregando las aristas
+		//recorre agregando los cantones
+	ifstream archivoAristas(this->nombreArchivo);
+
+	if (archivoAristas.is_open()) {
+		string linea;
+
+
+		//recorre el archivo
+		while (getline(archivoAristas, linea)) {
+
+			//recorre la linea del archivo
+			vector<string> datos = split(linea, ',');
+
+			//valida el numero de la provicia para agregar al grafo
+			switch (stoi(datos[0])) {
+			case GrafoCantonesGestor::SANJOSE:
+				grafoSJ.agregarArista(datos[1], datos[2], stoi(datos[3]));
+				break;
+			case GrafoCantonesGestor::ALAJUELA:
+				grafoA.agregarArista(datos[1], datos[2], stoi(datos[3]));
+				break;
+			case GrafoCantonesGestor::CARTAGO:
+				grafoC.agregarArista(datos[1], datos[2], stoi(datos[3]));
+				break;
+			case GrafoCantonesGestor::HEREDIA:
+				grafoH.agregarArista(datos[1], datos[2], stoi(datos[3]));
+				break;
+			case GrafoCantonesGestor::GUNACASTE:
+				grafoG.agregarArista(datos[1], datos[2], stoi(datos[3]));
+				break;
+			case GrafoCantonesGestor::PUNTARENAS:
+				grafoP.agregarArista(datos[1], datos[2], stoi(datos[3]));
+				break;
+			case GrafoCantonesGestor::LIMON:
+				grafoL.agregarArista(datos[1], datos[2], stoi(datos[3]));
+				break;
+			default:
+				std::cout << "Invalid value entered. Please enter a value between 1 and 7." << std::endl;
+				break;
+			}
+		}
+
+		archivo.close();  // Cierra el archivo después de leerlo.
+	}
+	else {
+		cout << "No se pudo abrir el archivo." << std::endl;
+	}
 }
+
