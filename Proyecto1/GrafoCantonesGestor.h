@@ -28,6 +28,7 @@ public:
 	//Dada una provincia la ruta mas corta del canton
 	void rutaMasCorta(string provincia, string cantonInicio, string cantonDestino);
 
+	void recubridorMinimo_kruskal(); 
 	//Valida si la provincia ingresada es valida
 	bool validarProvincias(string provincia);
 

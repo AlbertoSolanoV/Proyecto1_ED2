@@ -154,10 +154,12 @@ int main()
 
 
 			//opcion ruta mas corta
-			consultaProvincia = "San José";
+			/*consultaProvincia = "San José";
 			cantonInicio = "San José";
 			cantonDestino = "Tibas";
-			gestor->rutaMasCorta(consultaProvincia, cantonInicio, cantonDestino);
+			gestor->rutaMasCorta(consultaProvincia, cantonInicio, cantonDestino);*/
+
+			gestor->recubridorMinimo_kruskal();
 
 
 			break;

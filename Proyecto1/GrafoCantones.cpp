@@ -8,6 +8,7 @@ GrafoCantones::GrafoCantones() {
 // Agregar un cantón (nodo) al grafo
 void GrafoCantones::agregarCanton(const std::string& canton) {
 	listaAdyacencia[canton] = std::vector<Arista>();
+	this->nodos++;
 }
 
 // Agregar una arista (con peso) entre dos cantones existentes en el grafo
@@ -25,6 +26,62 @@ void GrafoCantones::mostrarGrafo() {
 		}
 		std::cout << std::endl;
 	}
+}
+
+GrafoCantones* GrafoCantones::recubridorMinimo_kruskal() 
+{
+	GrafoCantones* result = new GrafoCantones();
+
+	unordered_map<string, vector<Arista>> map;
+	vector<int> pertenece(this->nodos);
+	int i = 0;
+	for (const auto& kvp : this->listaAdyacencia) {
+		map[kvp.first] = vector<Arista>();
+		pertenece[i] = i;
+		i++;
+	}
+
+	int nodoA;
+	int nodoB;
+	string nameA;
+	string nameB;
+	int arcos = 1;
+
+	while (arcos < this->nodos) {
+		i = 0; 
+		int min = numeric_limits<int>::max(); 
+		for (const auto& firstList : this->listaAdyacencia) {
+			string cantonActual = firstList.first;
+			for (int k = 0; k < this->nodos; k++) {
+				
+				if (this->listaAdyacencia[cantonActual].size() > k && min > this->listaAdyacencia[cantonActual].at(k).peso && this->listaAdyacencia[cantonActual].at(k).peso != 0 && pertenece[i] != pertenece[k]) {
+					min = this->listaAdyacencia[cantonActual].at(k).peso;
+					nodoA = i;
+					nodoB = k;
+					nameA = cantonActual;
+					nameB = this->listaAdyacencia[cantonActual].at(k).cantonDestino;
+				}
+				k++;
+			}
+			i++;
+		}
+
+		if (pertenece[nodoA] != pertenece[nodoB]) {
+			map[nameA].push_back({ nameB, min });
+			map[nameB].push_back({ nameA, min });
+		}
+
+		int temp = pertenece[nodoB];
+		pertenece[nodoB] = pertenece[nodoA];
+		for (int j = 0; j < this->nodos; j++) {
+			if (pertenece[j] == temp) {
+				pertenece[j] = pertenece[nodoA];
+			}
+		}
+		arcos++;
+	}
+
+	return result;
 }
 
 std::vector<std::string>  GrafoCantones::rutaMasCorta(const std::string& cantonInicio, const std::string& cantonDestino) {

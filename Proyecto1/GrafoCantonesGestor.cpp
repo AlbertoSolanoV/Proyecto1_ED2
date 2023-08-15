@@ -49,6 +49,64 @@ void GrafoCantonesGestor::rutaMasCorta(string provincia, string cantonInicio, st
 	}
 }
 
+void GrafoCantonesGestor::recubridorMinimo_kruskal()
+{
+	cout << "Cual provincia quiere saber el recubridor minimo para la instalacion de la fibra?" << endl;
+	cout << "1. San Jose" << endl;
+	cout << "2. Alajuela" << endl;
+	cout << "3. Cartago" << endl;
+	cout << "4. Heredia" << endl;
+	cout << "5. Puntarenas" << endl;
+	cout << "6. Limon" << endl;
+	cout << "7. Guanacaste" << endl;
+	bool incorrect = true;
+	int opcion;
+	string opcionString;
+	do {
+		try {
+			cout << "Ingrese una opcion: ";
+			std::getline(std::cin, opcionString);
+			opcion = stoi(opcionString);
+			incorrect = false;
+		}
+		catch (const std::exception e) {
+			cout << "Debe de ser un numero! Nuevamente: " << endl;
+		}
+	} while (incorrect);
+
+	switch (opcion)
+	{
+	case 1:
+		grafoCantonSjo->recubridorMinimo_kruskal();
+		break;
+	case 2:
+		grafoCantonAla->recubridorMinimo_kruskal();
+		break;
+	case 3:
+		grafoCantonCar->recubridorMinimo_kruskal();
+		break;
+	case 4:
+		grafoCantonHer->recubridorMinimo_kruskal();
+		break;
+	case 5:
+		grafoCantonPun->recubridorMinimo_kruskal();
+		break;
+	case 6:
+		grafoCantonLim->recubridorMinimo_kruskal();
+		break;
+	case 7:
+		grafoCantonGua->recubridorMinimo_kruskal();
+		break;
+	default:
+		cout << "La provincia no existe. " << endl;
+		break;
+	}
+}
+
+void imprimirRespuesta() {
+
+}
+
 bool GrafoCantonesGestor::validarProvincias(string provincia)
 {
 	return std::find(PROVINCIAS.begin(), PROVINCIAS.end(), provincia) != PROVINCIAS.end();

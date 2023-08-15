@@ -14,8 +14,8 @@ struct Arista {
 class GrafoCantones
 {
 private:
-    std::unordered_map<std::string, std::vector<Arista>> listaAdyacencia;
-
+    unordered_map<string,vector<Arista>> listaAdyacencia;
+    int nodos = 0;
 public:
 
 
@@ -32,5 +32,7 @@ public:
 
     // Encontrar la ruta más corta desde un cantón de inicio a otro cantón de destino dentro de la misma provincia
     std::vector<std::string> rutaMasCorta(const std::string& cantonInicio, const std::string& cantonDestino);
+
+    GrafoCantones* recubridorMinimo_kruskal();
 
 };
