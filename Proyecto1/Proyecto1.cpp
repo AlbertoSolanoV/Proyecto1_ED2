@@ -7,7 +7,6 @@
 #include "Canton.h"
 #include "archivoLeer.h"
 #include "GrafoCantonesGestor.h"
-
 using namespace std;
 
 int main()

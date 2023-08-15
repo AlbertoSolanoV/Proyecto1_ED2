@@ -26,7 +26,7 @@ public:
 	* reference_wrapper -> se utiliza para poder tener referencia a los objetos
 	* mejora la gestion de memoria por las referencias
 	*/
-	void leerCSVProvincia(vector<std::shared_ptr<GrafoCantones>> listaGrafos);
+	void leerCSVProvincia(GrafoCantones& grafoSJ, GrafoCantones& grafoH, GrafoCantones& grafoC, GrafoCantones& grafoA, GrafoCantones& grafoP, GrafoCantones& grafoG, GrafoCantones& grafoL);
 
 };
 

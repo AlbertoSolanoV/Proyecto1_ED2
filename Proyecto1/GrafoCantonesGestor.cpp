@@ -6,27 +6,9 @@ void GrafoCantonesGestor::llenarGrafos()
 
 
 	//Envia los grafos creados al metodo de lectura de txt
-	//vector<shared_ptr<GrafoCantones>> listaObjs;
-	//listaObjs.push_back(std::make_shared<GrafoCantones>("hola"));
-	/*Debe de ser cambiado al metedo de lectura
-	* Se deben de enviar todos los grafos creados para que se les asigne la data
-	*/
+	lectura.setNombreArchivo("distancias.txt");
 
-// Agregar cantones al grafo
-	grafoCantonSjo->agregarCanton("San José");
-	grafoCantonSjo->agregarCanton("Heredia");
-	grafoCantonSjo->agregarCanton("Alajuela");
-	grafoCantonSjo->agregarCanton("Cartago");
-	grafoCantonSjo->agregarCanton("Cartago Norte");
-	grafoCantonSjo->agregarCanton("Tibas");
-
-	// Agregar aristas con peso entre los cantones
-	grafoCantonSjo->agregarArista("San José", "Heredia", 10);
-	grafoCantonSjo->agregarArista("San José", "Alajuela", 20);
-	grafoCantonSjo->agregarArista("Heredia", "Cartago", 15);
-	grafoCantonSjo->agregarArista("Cartago", "San José", 5);
-	grafoCantonSjo->agregarArista("Heredia", "Cartago Norte", 12);
-	grafoCantonSjo->agregarArista("Tibas", "Alajuela", 8);
+	lectura.leerCSVProvincia(*grafoCantonSjo, *grafoCantonHer, *grafoCantonCar, *grafoCantonAla, *grafoCantonPun, *grafoCantonGua, *grafoCantonLim);
 
 }
 
@@ -109,7 +91,7 @@ void imprimirRespuesta() {
 
 bool GrafoCantonesGestor::validarProvincias(string provincia)
 {
-	return std::find(PROVINCIAS.begin(), PROVINCIAS.end(), provincia) != PROVINCIAS.end();
+	return std::find(PROVINCIAS_NOMBRES.begin(), PROVINCIAS_NOMBRES.end(), provincia) != PROVINCIAS_NOMBRES.end();
 }
 
 //inicializa los grafos
