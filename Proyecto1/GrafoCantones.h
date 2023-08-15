@@ -33,6 +33,6 @@ public:
     // Encontrar la ruta más corta desde un cantón de inicio a otro cantón de destino dentro de la misma provincia
     std::vector<std::string> rutaMasCorta(const std::string& cantonInicio, const std::string& cantonDestino);
 
-    GrafoCantones* recubridorMinimo_kruskal();
+    unordered_map<string, vector<Arista>> recubridorMinimo_kruskal();
 
 };

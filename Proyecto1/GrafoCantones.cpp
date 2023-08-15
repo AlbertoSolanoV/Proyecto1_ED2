@@ -28,7 +28,7 @@ void GrafoCantones::mostrarGrafo() {
 	}
 }
 
-GrafoCantones* GrafoCantones::recubridorMinimo_kruskal() 
+unordered_map<string, vector<Arista>> GrafoCantones::recubridorMinimo_kruskal()
 {
 	GrafoCantones* result = new GrafoCantones();
 
@@ -81,7 +81,7 @@ GrafoCantones* GrafoCantones::recubridorMinimo_kruskal()
 		arcos++;
 	}
 
-	return result;
+	return map;
 }
 
 std::vector<std::string>  GrafoCantones::rutaMasCorta(const std::string& cantonInicio, const std::string& cantonDestino) {
