@@ -36,6 +36,9 @@ public:
 
 	void leerArchivos();
 
+	//Dada una provincia la ruta para realizar una instalacion de fibra optica
+	void fibraOptica(string provincia);
+
 	//Arreglo de las princias a validar
 	static const enum PROVINCIAS {
 		SANJOSE = 1,

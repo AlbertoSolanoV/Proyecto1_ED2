@@ -31,6 +31,22 @@ void GrafoCantonesGestor::rutaMasCorta(string provincia, string cantonInicio, st
 	}
 }
 
+void GrafoCantonesGestor::fibraOptica(string provincia)
+{
+	//validar la pricia y el canton
+	if (validarProvincias(provincia)) {
+
+		std::vector<AristaDetallada> redFibra = grafoCantonCar->kruskal();
+		for (const auto& arista : redFibra) {
+			std::cout << "Arista: " << arista.cantonOrigen << " - " << arista.cantonDestino << " (Peso: " << arista.peso << ")\n";
+		}
+	}
+	else
+	{
+		cout << "La provincia ingresada no es valida" << endl;
+	}
+}
+
 bool GrafoCantonesGestor::validarProvincias(string provincia)
 {
 	return std::find(PROVINCIAS_NOMBRES.begin(), PROVINCIAS_NOMBRES.end(), provincia) != PROVINCIAS_NOMBRES.end();

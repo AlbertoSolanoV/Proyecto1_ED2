@@ -158,6 +158,8 @@ int main()
 			cantonDestino = "Tibas";
 			gestor->rutaMasCorta(consultaProvincia, cantonInicio, cantonDestino);
 
+		
+			gestor->fibraOptica(consultaProvincia);
 
 			break;
 		case 10:
