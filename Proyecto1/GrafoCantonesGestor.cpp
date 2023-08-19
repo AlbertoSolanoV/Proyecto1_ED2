@@ -13,10 +13,12 @@ void GrafoCantonesGestor::llenarGrafos()
 }
 
 void GrafoCantonesGestor::rutaMasCorta(string provincia, string cantonInicio, string cantonDestino)
-{
+{	
 	//validar la pricia y el canton
 	if (validarProvincias(provincia)) {
-		ruta = grafoCantonSjo->rutaMasCorta(cantonInicio, cantonDestino);
+		GrafoCantones& result = getGrafoBasedOnProv();
+
+		ruta = result.rutaMasCorta(cantonInicio, cantonDestino);
 
 		// Mostrar la ruta más corta
 		cout << "Ruta más corta entre " << cantonInicio << " y " << cantonDestino << ":" << std::endl;
@@ -49,7 +51,66 @@ void GrafoCantonesGestor::fibraOptica(string provincia)
 
 bool GrafoCantonesGestor::validarProvincias(string provincia)
 {
-	return std::find(PROVINCIAS_NOMBRES.begin(), PROVINCIAS_NOMBRES.end(), provincia) != PROVINCIAS_NOMBRES.end();
+	bool exist = false;
+	for (int i = 0; i < PROVINCIAS_NOMBRES.size(); i++) {
+		if (PROVINCIAS_NOMBRES[i].compare(provincia))
+		{
+			exist = true;
+			setCurrentProvincia(to_string(i));
+			break;
+		}
+	}
+
+	return exist;
+}
+
+string GrafoCantonesGestor::getCurrentProvincia()
+{
+	return this->currentProvincia;
+}
+
+void GrafoCantonesGestor::setCurrentProvincia(const std::string& newValue)
+{
+	this->currentProvincia = newValue;
+}
+
+GrafoCantones& GrafoCantonesGestor::getGrafoBasedOnProv()
+{
+	GrafoCantones nullGrafo;
+	//valida el numero de la provicia para agregar al grafo
+	switch (stoi(getCurrentProvincia())) {
+	case GrafoCantonesGestor::SANJOSE:
+		return *grafoCantonSjo;
+
+		break;
+	case GrafoCantonesGestor::ALAJUELA:
+		return *grafoCantonAla;
+
+		break;
+	case GrafoCantonesGestor::CARTAGO:
+		return *grafoCantonCar;
+
+		break;
+	case GrafoCantonesGestor::HEREDIA:
+		return *grafoCantonHer;
+
+		break;
+	case GrafoCantonesGestor::GUNACASTE:
+		return *grafoCantonGua;
+
+		break;
+	case GrafoCantonesGestor::PUNTARENAS:
+		return *grafoCantonPun;
+
+		break;
+	case GrafoCantonesGestor::LIMON:
+		return *grafoCantonLim;
+		break;
+	default:
+		std::cout << "Invalid value entered. Please enter a value between 1 and 7. getGrafoBasedOnProv" << std::endl;
+		return nullGrafo;
+		break;
+	}
 }
 
 //inicializa los grafos

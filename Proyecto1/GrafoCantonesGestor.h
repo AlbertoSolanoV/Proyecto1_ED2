@@ -18,6 +18,7 @@ private:
 	archivoLeer lectura;
 	vector<std::string> ruta;
 	void inicializarGrafos();
+	string currentProvincia;
 
 public:
     /* public members */
@@ -39,6 +40,16 @@ public:
 	//Dada una provincia la ruta para realizar una instalacion de fibra optica
 	void fibraOptica(string provincia);
 
+	// Getter method
+	string getCurrentProvincia();
+
+	GrafoCantones& getGrafoBasedOnProv();
+
+	int convertNameToNumber();
+
+	// Setter method
+	void setCurrentProvincia(const std::string& newValue);
+
 	//Arreglo de las princias a validar
 	static const enum PROVINCIAS {
 		SANJOSE = 1,
@@ -54,10 +65,10 @@ public:
 	"San José",
 	"Alajuela",
 	"Cartago",
-	"Guanacaste",
 	"Heredia",
+	"Guanacaste",
+	"Puntarenas",
 	"Limón",
-	"Puntarenas"
 	};
 };
 
