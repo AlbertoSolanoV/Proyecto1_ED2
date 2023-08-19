@@ -21,13 +21,13 @@ private:
 	string currentProvincia;
 
 public:
-    /* public members */
+	/* public members */
 
 	// Default constructor
 	GrafoCantonesGestor();
 
 	//llena de informacion los grafos
-    void llenarGrafos();
+	void llenarGrafos();
 
 	//Dada una provincia la ruta mas corta del canton
 	void rutaMasCorta(string provincia, string cantonInicio, string cantonDestino);
@@ -36,6 +36,9 @@ public:
 	bool validarProvincias(string provincia);
 
 	void leerArchivos();
+
+	//Dada una provincia la ruta para realizar una instalacion de fibra optica
+	void fibraOptica(string provincia);
 
 	// Getter method
 	string getCurrentProvincia();
@@ -59,6 +62,7 @@ public:
 	};
 
 	const vector<string> PROVINCIAS_NOMBRES = {
+	"algoRandom",
 	"San José",
 	"Alajuela",
 	"Cartago",
