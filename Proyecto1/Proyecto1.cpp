@@ -153,10 +153,10 @@ int main()
 
 
 			//opcion ruta mas corta
-			consultaProvincia = "San José";
-			cantonInicio = "San José";
+			consultaProvincia = "Cartago";
+			/*cantonInicio = "San José";
 			cantonDestino = "Vázquez de Coronado";
-			gestor->rutaMasCorta(consultaProvincia, cantonInicio, cantonDestino);
+			gestor->rutaMasCorta(consultaProvincia, cantonInicio, cantonDestino);*/
 
 		
 			gestor->fibraOptica(consultaProvincia);

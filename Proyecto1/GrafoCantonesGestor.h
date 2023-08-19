@@ -21,13 +21,13 @@ private:
 	string currentProvincia;
 
 public:
-    /* public members */
+	/* public members */
 
 	// Default constructor
 	GrafoCantonesGestor();
 
 	//llena de informacion los grafos
-    void llenarGrafos();
+	void llenarGrafos();
 
 	//Dada una provincia la ruta mas corta del canton
 	void rutaMasCorta(string provincia, string cantonInicio, string cantonDestino);
@@ -62,6 +62,7 @@ public:
 	};
 
 	const vector<string> PROVINCIAS_NOMBRES = {
+	"algoRandom",
 	"San José",
 	"Alajuela",
 	"Cartago",
