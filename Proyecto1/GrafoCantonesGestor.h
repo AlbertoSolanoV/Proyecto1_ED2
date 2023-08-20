@@ -39,6 +39,8 @@ public:
 
 	//Dada una provincia la ruta para realizar una instalacion de fibra optica
 	void fibraOptica(string provincia);
+	//Para los cantones vecinos
+	void cantonesVecinos(string provincia, string canton);
 
 	// Getter method
 	string getCurrentProvincia();

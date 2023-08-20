@@ -51,6 +51,25 @@ void GrafoCantonesGestor::fibraOptica(string provincia)
 	}
 }
 
+void GrafoCantonesGestor::cantonesVecinos(string provincia, string canton)
+{
+	//validar la pricia y el canton
+	if (validarProvincias(provincia)) {
+
+		GrafoCantones& result = getGrafoBasedOnProv();
+
+		std::vector<AristaDetallada> redFibra = result.kruskal();
+		for (const auto& arista : redFibra) {
+			if (arista.cantonOrigen.compare(canton) == 0 || arista.cantonDestino.compare(canton) == 0)
+				std::cout << "Cantones: " << arista.cantonOrigen << " - " << arista.cantonDestino << " (Distancia: " << arista.peso << ")\n";
+		}
+	}
+	else
+	{
+		cout << "La provincia ingresada no es valida" << endl;
+	}
+}
+
 bool GrafoCantonesGestor::validarProvincias(string provincia)
 {
 	bool exist = false;
