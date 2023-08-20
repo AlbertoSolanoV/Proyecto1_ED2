@@ -1,91 +1,91 @@
-1,Acosta,San José,28
-1,Acosta,Escazú,37
+1,Acosta,San Jose,28
+1,Acosta,Escazu,37
 1,Acosta,Puriscal,29
 1,Acosta,Mora,32
 1,Acosta,Santa Ana,43
 1,Acosta,Alajuelita,31
-1,Alajuelita,San José,6
+1,Alajuelita,San Jose,6
 1,Alajuelita,Desamparados,7
-1,Alajuelita,Aserrí,13
+1,Alajuelita,Aserri,13
 1,Alajuelita,Curridabat,9
-1,Aserrí,Desamparados,5
-1,Aserrí,Alajuelita,6
-1,Aserrí,Acosta,19
-1,Aserrí,Dota,59
-1,Aserrí,León Cortés Castro,46
-1,Curridabat,San José,6
+1,Aserri,Desamparados,5
+1,Aserri,Alajuelita,6
+1,Aserri,Acosta,19
+1,Aserri,Dota,59
+1,Aserri,Leon Cortes Castro,46
+1,Curridabat,San Jose,6
 1,Curridabat,Alajuelita,9
 1,Curridabat,Montes de Oca,3
-1,Desamparados,San José,4
-1,Desamparados,Aserrí,5
+1,Desamparados,San Jose,4
+1,Desamparados,Aserri,5
 1,Desamparados,Alajuelita,5
 1,Desamparados,Dota,65
 1,Dota,Desamparados,62
-1,Dota,Tarrazú,7
-1,Dota,Pérez Zeledón,111
-1,Escazú,San José,9
-1,Escazú,Santa Ana,6
-1,Escazú,Alajuelita,7
-1,Escazú,Acosta,32
-1,Goicoechea,San José,5
-1,Goicoechea,Vázquez de Coronado,22
-1,Goicoechea,Tibás,5
+1,Dota,Tarrazu,7
+1,Dota,Perez Zeledon,111
+1,Escazu,San Jose,9
+1,Escazu,Santa Ana,6
+1,Escazu,Alajuelita,7
+1,Escazu,Acosta,32
+1,Goicoechea,San Jose,5
+1,Goicoechea,Vazquez de Coronado,22
+1,Goicoechea,Tibas,5
 1,Goicoechea,Moravia,10
 1,Goicoechea,Montes de Oca,2
-1,León Cortés Castro,Desamparados,51
-1,León Cortés Castro,Tarrazú,4
-1,León Cortés Castro,Aserrí,45
-1,Montes de Oca,San José,3
+1,Leon Cortes Castro,Desamparados,51
+1,Leon Cortes Castro,Tarrazu,4
+1,Leon Cortes Castro,Aserri,45
+1,Montes de Oca,San Jose,3
 1,Montes de Oca,Goicoechea,3
 1,Montes de Oca,Curridabat,5
 1,Mora,Turrubares,83
 1,Mora,Puriscal,22
 1,Mora,Acosta,32
 1,Mora,Santa Ana,2
-1,Mora,Escazú,18
-1,Moravia,Tibás,3
+1,Mora,Escazu,18
+1,Moravia,Tibas,3
 1,Moravia,Goicoechea,2
-1,Moravia,Vázquez de Coronado,20
-1,Pérez Zeledón,Dota,97
+1,Moravia,Vazquez de Coronado,20
+1,Perez Zeledon,Dota,97
 1,Puriscal,Mora,50
 1,Puriscal,Acosta,58
 1,Puriscal,Turrubares,52
-1,San José,Escazú,9
-1,San José,Desamparados,4
-1,San José,Goicoechea,11
-1,San José,Alajuelita,6
-1,San José,Tibás,3
-1,San José,Montes de Oca,3
-1,San José,Curridabat,6
-1,Santa Ana,Escazú,8
+1,San Jose,Escazu,9
+1,San Jose,Desamparados,4
+1,San Jose,Goicoechea,11
+1,San Jose,Alajuelita,6
+1,San Jose,Tibas,3
+1,San Jose,Montes de Oca,3
+1,San Jose,Curridabat,6
+1,Santa Ana,Escazu,8
 1,Santa Ana,Mora,10
 1,Santa Ana,Acosta,42
-1,Tarrazú,Aserrí,41
-1,Tarrazú,Dota,18
-1,Tarrazú,León Cortés Castro,4
-1,Tibás,San José,3
-1,Tibás,Goicoechea,5
-1,Tibás,Moravia,13
+1,Tarrazu,Aserri,41
+1,Tarrazu,Dota,18
+1,Tarrazu,Leon Cortes Castro,4
+1,Tibas,San Jose,3
+1,Tibas,Goicoechea,5
+1,Tibas,Moravia,13
 1,Turrubares,Puriscal,21
 1,Turrubares,Mora,43
-1,Vázquez de Coronado,Goicoechea,24
-1,Vázquez de Coronado,Moravia,20
+1,Vazquez de Coronado,Goicoechea,24
+1,Vazquez de Coronado,Moravia,20
 2,Alajuela,Atenas,69
 2,Alajuela,Grecia,65
-2,Alajuela,Poás,16
-2,Alajuela,Río Cuarto,57
+2,Alajuela,Poas,16
+2,Alajuela,Rio Cuarto,57
 2,Atenas,Alajuela,69
 2,Atenas,Grecia,20
 2,Atenas,Naranjo,22
 2,Atenas,Orotina,20
 2,Atenas,Palmares,20
 2,Atenas,San Mateo,18
-2,Atenas,San Ramón,25
+2,Atenas,San Ramon,25
 2,Grecia,Alajuela,69
 2,Grecia,Atenas,20
 2,Grecia,Naranjo,18
-2,Grecia,Poás,13
-2,Grecia,Sarchí,7
+2,Grecia,Poas,13
+2,Grecia,Sarchi,7
 2,Guatuso,Los Chiles,71
 2,Guatuso,San Carlos,80
 2,Guatuso,Upala,44
@@ -95,97 +95,97 @@
 2,Naranjo,Atenas,22
 2,Naranjo,Grecia,18
 2,Naranjo,Palmares,12
-2,Naranjo,San Ramón,24
-2,Naranjo,Sarchí,7
+2,Naranjo,San Ramon,24
+2,Naranjo,Sarchi,7
 2,Naranjo,Zarcero,13
 2,Orotina,Atenas,20
 2,Orotina,San Mateo,4
 2,Palmares,Atenas,20
 2,Palmares,Naranjo,12
 2,Palmares,San Mateo,33
-2,Palmares,San Ramón,8
-2,Poás,Alajuela,16
-2,Poás,Grecia,13
-2,Poás,Sarchí,22
+2,Palmares,San Ramon,8
+2,Poas,Alajuela,16
+2,Poas,Grecia,13
+2,Poas,Sarchi,22
 2,Rio Cuarto,Alajuela,57
 2,Rio Cuarto,San Carlos,34
-2,Rio Cuarto,Sarchí,41
+2,Rio Cuarto,Sarchi,41
 2,San Carlos,Guatuso,80
 2,San Carlos,Los Chiles,96
-2,San Carlos,Río Cuarto,34
-2,San Carlos,San Ramón,38
-2,San Carlos,Sarchí,48
+2,San Carlos,Rio Cuarto,34
+2,San Carlos,San Ramon,38
+2,San Carlos,Sarchi,48
 2,San Carlos,Zarcero,28
 2,San Mateo,Atenas,18
 2,San Mateo,Orotina,4
-2,San Mateo,San Ramón,31
-2,San Ramón,Naranjo,24
+2,San Mateo,San Ramon,31
+2,San Ramon,Naranjo,24
 2,San Mateo,Palmares,33
-2,San Ramón,Palmares,8
-2,San Ramón,San Carlos,38
-2,San Ramón,San Mateo,31
-2,San Ramón,Zarcero,23
-2,Sarchí,Alajuela,31
-2,Sarchí,Grecia,7
-2,Sarchí,Naranjo,7
-2,Sarchí,Poás,22
-2,Sarchí,Río Cuarto,41
-2,Sarchí,San Carlos,41
-2,Sarchí,Zarcero,21
+2,San Ramon,Palmares,8
+2,San Ramon,San Carlos,38
+2,San Ramon,San Mateo,31
+2,San Ramon,Zarcero,23
+2,Sarchi,Alajuela,31
+2,Sarchi,Grecia,7
+2,Sarchi,Naranjo,7
+2,Sarchi,Poas,22
+2,Sarchi,Rio Cuarto,41
+2,Sarchi,San Carlos,41
+2,Sarchi,Zarcero,21
 2,Upala,Guatuso,44
 2,Upala,Los Chiles,62
 2,Zarcero,Naranjo,13
 2,Zarcero,San Carlos,28
-2,Zarcero,San Ramón,23
-2,Zarcero,Sarchí,21
-3,Cartago,La Unión,11
+2,Zarcero,San Ramon,23
+2,Zarcero,Sarchi,21
+3,Cartago,La Union,11
 3,Cartago,Oreamuno,45
-3,Cartago,Paraíso,7
+3,Cartago,Paraiso,7
 3,Cartago,El Guarco,80
-3,La Unión,Cartago,11
+3,La Union,Cartago,11
 3,El Guarco,Cartago,80
 3,Oreamuno,Cartago,45
-3,Oreamuno,Paraíso,44
+3,Oreamuno,Paraiso,44
 3,Oreamuno,Alvarado,22
 3,Oreamuno,Turrialba,50
 3,Alvarado,Oreamuno,22
 3,Alvarado,Turrialba,64
-3,Alvarado,Paraíso,38
-3,Alvarado,Jiménez,17
-3,Paraíso,Cartago,7
-3,Paraíso,Oreamuno,44
-3,Paraíso,Alvarado,38
-3,Paraíso,Jiménez,47
-3,Paraíso,Turrialba,33
-3,Jiménez,Paraíso,47
-3,Jiménez,Alvarado,17
-3,Jiménez,Turrialba,12
+3,Alvarado,Paraiso,38
+3,Alvarado,Jimenez,17
+3,Paraiso,Cartago,7
+3,Paraiso,Oreamuno,44
+3,Paraiso,Alvarado,38
+3,Paraiso,Jimenez,47
+3,Paraiso,Turrialba,33
+3,Jimenez,Paraiso,47
+3,Jimenez,Alvarado,17
+3,Jimenez,Turrialba,12
 3,Turrialba,Oreamuno,50
 3,Turrialba,Alvarado,64
-3,Turrialba,Jiménez,12
-3,Turrialba,Paraíso,33
-4,Sarapiquí,Heredia,83
-4,Heredia,Sarapiquí,83
-4,Heredia,Santa Bárbara,9
+3,Turrialba,Jimenez,12
+3,Turrialba,Paraiso,33
+4,Sarapiqui,Heredia,83
+4,Heredia,Sarapiqui,83
+4,Heredia,Santa Barbara,9
 4,Heredia,Barva,9
 4,Heredia,San Rafael,4
 4,Heredia,San Isidro,9
 4,Heredia,Santo Domingo,4
 4,Heredia,San Pablo,3
-4,Santa Bárbara,Heredia,9
-4,Santa Bárbara,Belén,10
-4,Santa Bárbara,Flores,5
-4,Santa Bárbara,Barva,7
-4,Belén,Santa Bárbara,10
-4,Belén,Flores,5
-4,Belén,Heredia,0
-4,Flores,Santa Bárbara,5
-4,Flores,Belén,5
+4,Santa Barbara,Heredia,9
+4,Santa Barbara,Belen,10
+4,Santa Barbara,Flores,5
+4,Santa Barbara,Barva,7
+4,Belen,Santa Barbara,10
+4,Belen,Flores,5
+4,Belen,Heredia,0
+4,Flores,Santa Barbara,5
+4,Flores,Belen,5
 4,Flores,Barva,6
 4,Flores,San Rafael,9
 4,Flores,Heredia,5
 4,Barva,Heredia,9
-4,Barva,Santa Bárbara,7
+4,Barva,Santa Barbara,7
 4,Barva,San Rafael,4
 4,Barva,Flores,6
 4,Barva,Heredia,5
@@ -229,12 +229,12 @@
 5,Bagaces,Nicoya,108
 5,Bagaces,Cañas,23
 5,Cañas,Bagaces,23
-5,Cañas,Tilarán,25
+5,Cañas,Tilaran,25
 5,Cañas,Abangares,48
-5,Tilarán,Cañas,25
-5,Tilarán,Abangares,72
+5,Tilaran,Cañas,25
+5,Tilaran,Abangares,72
 5,Abangares,cañas,48
-5,Abangares,Tilarán,72
+5,Abangares,Tilaran,72
 6,Puntarenas,Montes de Oro,31
 6,Puntarenas,Esparza,21
 6,Montes de Oro,Puntarenas,31
@@ -263,15 +263,15 @@
 6,Golfito,Corredores,32
 6,Corredores,Golfito,32
 6,Corredores,Coto Brus,71
-7,Pococí,Guácimo,11
-7,Pococí,Siquirres,14
-7,Guácimo,Pococí,11
-7,Guácimo,Siquirres,24
-7,Siquirres,Guácimo,24
-7,Siquirres,Pococí,14
+7,Pococi,Guacimo,11
+7,Pococi,Siquirres,14
+7,Guacimo,Pococi,11
+7,Guacimo,Siquirres,24
+7,Siquirres,Guacimo,24
+7,Siquirres,Pococi,14
 7,Siquirres,Matina,33
 7,Matina,Siquirres,33
-7,Matina,Limón,38
-7,Limón,Talamanca,63
-7,Limón,Matina,38
-7,Talamanca,Limón,63
+7,Matina,Limon,38
+7,Limon,Talamanca,63
+7,Limon,Matina,38
+7,Talamanca,Limon,63

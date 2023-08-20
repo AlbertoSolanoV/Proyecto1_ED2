@@ -177,6 +177,14 @@ int main()
 			gestor->fibraOptica(provinciaGrafo);
 			break;
 		case 14:
+			cout << "Ingrese el nombre de la provincia para la cual desea seleccionar el canton" << std::endl;
+			std::getline(std::cin, provinciaGrafo);
+			cout << "Ingrese el nombre del canton" << std::endl;
+			std::getline(std::cin, G_cantonInicio);
+
+			gestor->cantonesVecinos(provinciaGrafo, G_cantonInicio);
+
+
 			break;
 		case 10:
 			cout << "Salir, Muchas gracias!" << endl;
