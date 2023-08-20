@@ -19,7 +19,10 @@ int main()
 	archivoLeer leerDatos;
 	string buscarCanton;
 	string buscarInfoCantonXprovincia;
+	string provinciaGrafo;
 	string rangoPoblacion;
+	string G_cantonInicio;
+	string G_cantonDestino;
 	Micelaneos micelaneos;
 	GrafoCantonesGestor* gestor;
 
@@ -27,9 +30,10 @@ int main()
 	string consultaProvincia;
 	std::string cantonInicio;
 	std::string cantonDestino;
+	gestor = new GrafoCantonesGestor();
 
 	do {
-		cout << "==== Menu ====" << std::endl;
+		cout << "==== Menu Arboles ====" << std::endl;
 		cout << "0. Insertar valores" << std::endl;
 		cout << "1. Modificar canton" << std::endl;
 		cout << "2. Consultar para una provincia : la cantidad de cantones y la población total." << std::endl;
@@ -40,7 +44,12 @@ int main()
 		cout << "7. Listar de mayor a menor poblacion" << std::endl;
 		cout << "8. Listar de menor a mayor poblacion" << std::endl;
 		cout << "9. listar por rango(De mayor hasta el rango) poblacion" << std::endl;
-		cout << "11. Grafo" << std::endl;
+		cout << "==== Menu Grafos ====" << std::endl;
+		cout << "11. Llenar grafos" << std::endl;
+		cout << "12. Mostrar la ruta mas corta entre 2 cantones" << std::endl;
+		cout << "13. Mostrar red de comunicacion de fibra optica dada una provincia" << std::endl;
+		cout << "14. Mostrar cantones vecinos de un canton en especifico" << std::endl;
+		cout << "15. Mostrar Guia de tour iniciando desde un canton en especifico" << std::endl;
 		cout << "10. Salir" << std::endl;
 		bool incorrect = true;
 		do {
@@ -78,7 +87,7 @@ int main()
 			cout << "7.Limon" << std::endl;
 			cout << "Digite el numero de la provincia de la que desea extrear los datos cantonales" << std::endl;
 			std::getline(std::cin, buscarInfoCantonXprovincia);
-			if(arbolProvinciaCanton.validarProvincia(buscarInfoCantonXprovincia))
+			if (arbolProvinciaCanton.validarProvincia(buscarInfoCantonXprovincia))
 				arbolProvinciaCanton.buscarInformacionProvincia(buscarInfoCantonXprovincia);
 			else
 				cout << "Digito no valido, seleccione del 1 al 7" << std::endl;
@@ -90,7 +99,7 @@ int main()
 			arbolCanton.buscarPorNombre(buscarCanton, true);
 			cout << endl;
 			break;
-		case 4: 
+		case 4:
 			cout << "Digite el numero de la provincia de la que desea extrear los datos cantonales" << std::endl;
 			cout << "1. San Jose" << std::endl;
 			cout << "2.Alajuela" << std::endl;
@@ -141,26 +150,36 @@ int main()
 				break;
 			}
 			else {
-				arbolCantonPoblacion.mostrarRango(stoi( rangoPoblacion));
+				arbolCantonPoblacion.mostrarRango(stoi(rangoPoblacion));
 				arbolCantonPoblacion = ArbolCantonPoblacion();//Se elimina el arbol viejo y se crea uno nuevo sin datos
 			}
 
 			break;
 		case 11:
 			//opcion llenar grafo
-			gestor = new GrafoCantonesGestor();
+			cout << "Llenando grafos...." << std::endl;
 			gestor->llenarGrafos();
+			cout << "Grafos llenos" << std::endl;
+			break;
+		case 12:
+			cout << "Ingrese el nombre de la provincia en la que se situan los cantones para los que desea averiguar la ruta mas corta" << std::endl;
+			std::getline(std::cin, provinciaGrafo);
+			cout << "Ingrese el nombre del canton desde el cual desea iniciar la ruta" << std::endl;
+			std::getline(std::cin, G_cantonInicio);
+			cout << "Ingrese el nombre del canton al que desea llegar" << std::endl;
+			std::getline(std::cin, G_cantonDestino);
 
+			gestor->rutaMasCorta(provinciaGrafo, G_cantonInicio, G_cantonDestino);
 
-			//opcion ruta mas corta
-			consultaProvincia = "Cartago";
-			/*cantonInicio = "San José";
-			cantonDestino = "Vázquez de Coronado";
-			gestor->rutaMasCorta(consultaProvincia, cantonInicio, cantonDestino);*/
-
-		
-			gestor->fibraOptica(consultaProvincia);
-
+			break;
+		case 13:
+			cout << "Ingrese el nombre de la provincia para la cual desea visualizar la red de comunicacion mediante fibra optica" << std::endl;
+			std::getline(std::cin, provinciaGrafo);
+			gestor->fibraOptica(provinciaGrafo);
+			break;
+		case 14:
+			break;
+		case 15:
 			break;
 		case 10:
 			cout << "Salir, Muchas gracias!" << endl;

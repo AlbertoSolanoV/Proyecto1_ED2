@@ -162,6 +162,7 @@
     <ClInclude Include="Micelaneos.h" />
     <ClInclude Include="NodoProvinciaCanton.h" />
     <ClInclude Include="NodoCanton.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="cantones.txt" />
