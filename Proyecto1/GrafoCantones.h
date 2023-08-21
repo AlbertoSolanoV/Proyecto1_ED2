@@ -35,7 +35,7 @@ public:
     void agregarArista(const std::string& canton1, const std::string& canton2, int peso);
 
     // Mostrar el grafo
-    void mostrarGrafo();
+    void mostrarGrafo(string pCanton);
 
     // Encontrar la ruta más corta desde un cantón de inicio a otro cantón de destino dentro de la misma provincia
     std::vector<std::string> rutaMasCorta(const std::string& cantonInicio, const std::string& cantonDestino);

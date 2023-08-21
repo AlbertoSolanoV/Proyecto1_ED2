@@ -12,18 +12,36 @@ void GrafoCantones::agregarCanton(const std::string& canton) {
 
 // Agregar una arista (con peso) entre dos cantones existentes en el grafo
 void GrafoCantones::agregarArista(const std::string& canton1, const std::string& canton2, int peso) {
+
 	listaAdyacencia[canton1].push_back({ canton2, peso });
 	listaAdyacencia[canton2].push_back({ canton1, peso });
 }
 
-// Mostrar el grafo
-void GrafoCantones::mostrarGrafo() {
+// Mostrar el grafo/ vecinos
+void GrafoCantones::mostrarGrafo(string pCanton) {
+	std::vector<std::string> destinosImpresos;
+
 	for (const auto& kvp : listaAdyacencia) {
-		std::cout << "Cantón " << kvp.first << ": ";
-		for (const auto& arista : kvp.second) {
-			std::cout << "(" << arista.cantonDestino << ", " << arista.peso << ") ";
+		if (kvp.first == pCanton) {
+			std::cout << "Cantón " << kvp.first << ": ";
+
+			for (const auto& arista : kvp.second) {
+				bool destinoYaImpreso = false;
+				for (const std::string& destino : destinosImpresos) {
+					if (destino == arista.cantonDestino) {
+						destinoYaImpreso = true;
+						break;
+					}
+				}
+
+				if (!destinoYaImpreso) {
+					std::cout << "(" << arista.cantonDestino << " ) ";
+					destinosImpresos.push_back(arista.cantonDestino);
+				}
+			}
+
+			std::cout << std::endl;
 		}
-		std::cout << std::endl;
 	}
 }
 
@@ -67,23 +85,23 @@ std::vector<std::string>  GrafoCantones::rutaMasCorta(const std::string& cantonI
 }
 
 /*
-Preparación de los datos: Para aplicar Kruskal, necesitas tener las aristas del grafo junto con sus pesos. 
+Preparación de los datos: Para aplicar Kruskal, necesitas tener las aristas del grafo junto con sus pesos.
 En tu implementación, las aristas se almacenan en std::unordered_map<std::string, std::vector<Arista>> listaAdyacencia;.
 
-Ordenar las aristas: 
-Primero, todas las aristas se colocan en una lista y se ordenan en orden ascendente según sus pesos. 
+Ordenar las aristas:
+Primero, todas las aristas se colocan en una lista y se ordenan en orden ascendente según sus pesos.
 Esto te permite seleccionar las aristas de menor peso primero.
 
-Iniciar estructuras auxiliares: 
-Para controlar la conectividad entre los vértices, se utilizan estructuras auxiliares. 
+Iniciar estructuras auxiliares:
+Para controlar la conectividad entre los vértices, se utilizan estructuras auxiliares.
 En tu caso, se utiliza un diccionario std::unordered_map<std::string, std::string> padres; para rastrear los padres de cada vértice.
 
-Iteración por las aristas ordenadas: 
-A medida que se recorren las aristas ordenadas, se verifica si unir los vértices de la arista no forma un ciclo. 
-Esto se hace verificando si los vértices ya tienen el mismo padre. Si no tienen el mismo padre, se agrega la arista al árbol de expansión mínima y 
+Iteración por las aristas ordenadas:
+A medida que se recorren las aristas ordenadas, se verifica si unir los vértices de la arista no forma un ciclo.
+Esto se hace verificando si los vértices ya tienen el mismo padre. Si no tienen el mismo padre, se agrega la arista al árbol de expansión mínima y
 se actualiza la estructura de padres.
 
-Resultado: Al finalizar, el algoritmo devuelve un conjunto de aristas que forman el árbol de expansión mínima. 
+Resultado: Al finalizar, el algoritmo devuelve un conjunto de aristas que forman el árbol de expansión mínima.
 Cada arista tiene la información de los vértices conectados y el peso de la arista.
 */
 std::vector<AristaDetallada> GrafoCantones::kruskal() {
@@ -117,7 +135,7 @@ std::vector<AristaDetallada> GrafoCantones::kruskal() {
 	return mst;
 }
 /*
-El método encontrarPadre() implementa una técnica llamada "compresión de ruta", que mejora la eficiencia en la búsqueda de padres. 
+El método encontrarPadre() implementa una técnica llamada "compresión de ruta", que mejora la eficiencia en la búsqueda de padres.
 
 */
 std::string GrafoCantones::encontrarPadre(const std::string& canton, std::unordered_map<std::string, std::string>& padres) {
