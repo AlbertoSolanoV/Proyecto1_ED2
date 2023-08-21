@@ -58,11 +58,13 @@ void GrafoCantonesGestor::cantonesVecinos(string provincia, string canton)
 
 		GrafoCantones& result = getGrafoBasedOnProv();
 
-		std::vector<AristaDetallada> redFibra = result.kruskal();
+		result.mostrarGrafo(provincia);
+
+		/*std::vector<AristaDetallada> redFibra = result.kruskal();
 		for (const auto& arista : redFibra) {
 			if (arista.cantonOrigen.compare(canton) == 0 || arista.cantonDestino.compare(canton) == 0)
 				std::cout << "Cantones: " << arista.cantonOrigen << " - " << arista.cantonDestino << " (Distancia: " << arista.peso << ")\n";
-		}
+		}*/
 	}
 	else
 	{
