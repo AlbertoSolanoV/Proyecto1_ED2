@@ -65,7 +65,7 @@ public:
 
 	const vector<string> PROVINCIAS_NOMBRES = {
 	"algoRandom",
-	"San José",
+	"San Jose",
 	"Alajuela",
 	"Cartago",
 	"Heredia",
